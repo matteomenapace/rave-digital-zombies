@@ -455,7 +455,7 @@ if( !function_exists("theme_styles") ) {
         wp_enqueue_style( 'wpbs-style' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'theme_styles' );
+// add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 // enqueue javascript
 if( !function_exists( "theme_js" ) ) {  

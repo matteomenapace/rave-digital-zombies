@@ -14,24 +14,75 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'ravedigitalzombies');
 
-/** MySQL database username */
-define('DB_USER', 'ravedz');
+// some changes required for this to work using the remote db and remote uploads
+	
+	// echo('<pre>');
+	// print_r($_SERVER);
+	// echo('</pre>');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'rave123_');
+	$environment = 'production';
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	if ($_SERVER['HTTP_HOST'] == 'induction.baddeo.com') 			$environment = 'testing';
+	else if ($_SERVER['HTTP_HOST'] == 'localhost') 					$environment = 'dev-matteo';	
+/* 
+	@SEL and @RHYS, add your local host value under here (with mamp it should be 'localhost:8888')
+*/	
+	else if ($_SERVER['HTTP_HOST'] == 'ADD YOUR LOCAL HOST HERE')	$environment = 'dev-sel';
+	else if ($_SERVER['HTTP_HOST'] == 'ADD YOUR LOCAL HOST HERE') 	$environment = 'dev-rhys';
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+	// WP_HOME and WP_SITEURL are set in the remote DB
+	// but we're overriding them here to use the local url instead
+
+	switch ($environment)
+	{
+		case 'testing':
+			define ('DB_HOST', 			'localhost');
+			define ('WP_HOME', 			'http://induction.baddeo.com/');
+			define ('WP_SITEURL', 		'http://induction.baddeo.com/');
+			break;
+
+		case 'dev-matteo':
+			define ('DB_HOST', 			'46.183.13.53');
+			define ('WP_HOME', 			'http://localhost/rave/induction/microsite');
+			define ('WP_SITEURL', 		'http://localhost/rave/induction/microsite');
+			// define ('WP_CONTENT_DIR', 	$_SERVER['DOCUMENT_ROOT'] . '/rave/induction/microsite/wp-content'); 		// content directory is local
+			break;
+
+/* 
+	@SEL and @RHYS, add your local host values under here (with mamp it should be 'localhost:8888')
+*/
+
+		case 'dev-sel':
+			define ('DB_HOST', 			'46.183.13.53');
+			define ('WP_HOME', 			'CHANGE THIS');
+			define ('WP_SITEURL', 		'CHANGE THIS');
+			break;
+
+		case 'dev-rhys':
+			define ('DB_HOST', 			'46.183.13.53');
+			define ('WP_HOME', 			'CHANGE THIS');
+			define ('WP_SITEURL', 		'CHANGE THIS');
+			break;	
+	}
+	
+	
+	// THEME URL
+
+	define ('WP_THEME_URL', 			WP_SITEURL . '/wp-content/themes/ravedigitalzombies'); 		
+	// this allows us to use a local test, whilst keeping wp-content remote
+	// see https://codex.wordpress.org/Editing_wp-config.php#Moving_themes_folder
+	// and /wp-content/themes/ravedigitalzombies/header.php
+
+	// DB settings
+	// remote DB on baddeo.com
+	define ('DB_NAME', 					'baddeocomwpp4o37y56');
+	define ('DB_USER', 					'wptz2apl46gvvmog');
+	define ('DB_PASSWORD', 				'J1rN3}7Pwhf%51d0UnCO');
+	define ('DB_CHARSET', 				'utf8');
+	define ('DB_COLLATE', 				'');
+
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -42,14 +93,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         'eL*-W[YrsMY,ImdTLVfWsVGp,4p?bV.ixuIlk9.2-L7WEc:Vy4og@9YM-MCL}pOk');
+define('SECURE_AUTH_KEY',  '*SCvq?vWf40dGE1]y:mYEwr0tJBWL]XdL}}m=6]=onoJjl7[pPXJ3-HQDMn?VPZA');
+define('LOGGED_IN_KEY',    'yqk^uiNsAPWFSnP.xEHcOmV=9%R1CK@ZZBdmNKKVA21?K}fyPrC=Ttvi,/1^KEQh');
+define('NONCE_KEY',        'CEd5KKs9qsC7oCwd6G+k00gu7t4nZ83tC_ALax=YUApl1k@wc%]/mbT9.jhsIC5s');
+define('AUTH_SALT',        'K0-KHPijRox9F?[?uiUJm=JiRyX^+kuA3GN6*HbfSr?Ja/vfXpRJ/NpGgY}i5eo}');
+define('SECURE_AUTH_SALT', '0xE4]%fVt%MbwYrtI-W}OWX}+UzIh,]U+Mj6y.Gk9P50}IrpMlG=lCGzfZ6J_=lL');
+define('LOGGED_IN_SALT',   'QQ*D:bx,[95nm0?l-1nqn}_KdZ*mHh0.}sfmIh,re^Uqi4GDmrr]sY7.,:pv5a+:');
+define('NONCE_SALT',       '?7g,7jN]+y-z0%v%wL9]trs}7vVgSgyPqwoZ+,o[%izQFsI-XyyddmI*Vs7AaSSk');
 
 /**#@-*/
 
