@@ -28,7 +28,7 @@
 /* 
 	@SEL and @RHYS, add your local host value under here (with mamp it should be 'localhost:8888')
 */	
-	else if ($_SERVER['HTTP_HOST'] == 'ADD YOUR LOCAL HOST HERE')	$environment = 'dev-sel';
+	else if ($_SERVER['HTTP_HOST'] == 'localhost:8888')	$environment = 'dev-sel';
 	else if ($_SERVER['HTTP_HOST'] == 'ADD YOUR LOCAL HOST HERE') 	$environment = 'dev-rhys';
 
 
@@ -56,8 +56,8 @@
 
 		case 'dev-sel':
 			define ('DB_HOST', 			'46.183.13.53');
-			define ('WP_HOME', 			'CHANGE THIS');
-			define ('WP_SITEURL', 		'CHANGE THIS');
+			define ('WP_HOME', 			'http://localhost:8888/ravedigitalzombies');
+			define ('WP_SITEURL', 		'http://localhost:8888/ravedigitalzombies');
 			break;
 
 		case 'dev-rhys':

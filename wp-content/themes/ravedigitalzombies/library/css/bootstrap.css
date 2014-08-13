@@ -6828,3 +6828,6 @@ blockquote.pull-left {
     padding-right: 0;
   }
 }
+body {
+    background-color: #000;
+}
