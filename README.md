@@ -1,6 +1,9 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The Digital Zombies Induction Trail website: WP with special quiz powerz.
+
+
+<!--
 
 ### What is this repository for? ###
 
@@ -27,3 +30,5 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
+
+-->
