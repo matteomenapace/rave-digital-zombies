@@ -107,74 +107,45 @@ Template Name: Homepage with Quiz
 
 	jQuery(document).ready(function($)
 	{
-		$('.quiz_section').each(function(index)
+		// we select all the .quiz_section elements, minus the beginning and end bits
+		$('.quiz_section:not(.quiz_begin):not(.quiz_end)').each(function(index)
 		{
-
 			var $question = $(this), 
-				$title = $question.find('.mlw_qmn_question'),
-				$content
+				$originalTitle = $question.find('.mlw_qmn_question'),
+				$originalContent,
+				$newTitle,
+				// $newContent,
+				$modal = $('<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Modal title</h4></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-default btn-close" data-dismiss="modal">Done</button></div></div></div></div>'),
+				newTitle = ''
+
+			// add a unique class to the question element
+				// maybe this is not needed..	
+			$question.addClass('question')
+
+			// extract the newTitle
+			newTitle = $originalTitle.html() 	
 
 			// console.log($question)	
-			console.log($title)	
+			// console.log($originalTitle.html())	
 
-			// cut the title	
-			$title.detach()
+			// build the new title
+			$newTitle = $('<div class="title" data-toggle="modal" data-target="#modal' + index + '"></div>').html(newTitle)
 
-			// wrap the content in a modal
-			$content = $($question.html()).wrap('<div class="modal fade"></div>')
+			// cut the original title	
+			$originalTitle.detach()
 
-			$question.empty().append($title).append($content)
+			// wrap what's left of the the content in the modal
+			$modal.find('.modal-body').html($question.html())
 
+			// set the modal id
+			$modal.attr('id', 'modal' + index)
+
+			// set the modal title (as the question's title)
+			$modal.find('.modal-title').html(newTitle)
+
+			// empty the question box and append new title and modal
+			$question.empty().append($newTitle).append($modal)
 		})
-
-
-
-
-		/*var $modal = $('#modal'),
-			$modalTitle = $('#modalTitle'),
-			$modalBody = $('#modalBody'),
-			$question
-
-
-		$('.quiz_section .mlw_qmn_question').click(function(event)
-		{
-			console.log(event.target.innerText)
-
-			// change the modal title to reflect the question
-			var questionTitle = event.target.innerText
-			$modalTitle.html(questionTitle)
-
-			$modal.modal()
-
-			// event.target.parent()
-
-			// wrap the event target (question title HTML) in a jQuery object
-			var $questionTitle = $(event.target)
-
-			// grab the title's parent and assign it to the $question variable
-			$question = $questionTitle.parent()
-
-			// cut&paste the content of $question into $modalBody
-			var question = $question.html()
-			$question.html('') // cut
-			$modalBody.html(question) // paste	
-			
-
-			// console.log($question.parent())
-		})
-
-		$modal.on('hide.bs.modal', function (e) 
-		{
-			console.log('modal hide!')
-
-  			// cut&paste the modal body's content into the question box
-  			var modalContent = $modalBody.html()
-  			$question.html(modalContent)
-
-		})*/
-
-		
-
 	})
 
 </script>
