@@ -22,9 +22,7 @@ Template Name: Homepage with Quiz
             <section class="row post_content">
 
                 <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-md-4"><?php the_content(); ?></div>
-                    </div>
+<?php the_content(); ?>
                 </div>
 
             </section> <!-- end article header -->
@@ -108,7 +106,7 @@ Template Name: Homepage with Quiz
 
 			// add a unique class to the question element
 				// maybe this is not needed..	
-			$question.addClass('question')
+			$question.addClass('question col-sm-4 box')
 
 			// extract the newTitle
 			newTitle = $originalTitle.html() 	
