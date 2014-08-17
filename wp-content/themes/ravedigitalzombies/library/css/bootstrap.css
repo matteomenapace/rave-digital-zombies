@@ -6937,10 +6937,12 @@ blockquote.pull-left {
         padding-right: 0;
     }
 }
+.sidebar {
+    position: fixed;
+    right: 0;
+}
 .sidebar a {
     color: #000;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 .box {
     height: 200px;
