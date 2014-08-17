@@ -6937,9 +6937,16 @@ blockquote.pull-left {
         padding-right: 0;
     }
 }
+body {
+    background-color: #eee;
+}
 .sidebar {
     position: fixed;
+    top: 0;
     right: 0;
+    background-color: #fff;
+    height: 100%;
+    padding-top: 100px;
 }
 .sidebar a {
     color: #000;
