@@ -6,8 +6,8 @@ dashboard. Updates to this page are coming soon.
 It's turned off by default, but you can call it
 via the functions file.
 
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
+Developed by: Web Media Students at Ravensbourne
+URL: http://induction.ravensbourne.ac.uk/
 
 Special Thanks for code & inspiration to:
 @jackmcconnell - http://www.voltronik.co.uk/
@@ -120,8 +120,7 @@ you like.
 
 // Custom Backend Footer
 function wp_bootstrap_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
-}
+	echo 'Developed by <a href="http://www.ravensbourne.ac.uk/courses/undergraduate-2014-2015/web-media/ba-%28hons%29-web-media/" target="_blank">Web Media Students</a> at Ravensbourne.';
 
 // adding it to the admin area
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');

@@ -20,9 +20,8 @@ require_once('library/shortcodes.php');
 // Custom Backend Footer
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
 function wp_bootstrap_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="http://320press.com" target="_blank">320press</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
+	echo 'Developed by <a href="http://www.ravensbourne.ac.uk/courses/undergraduate-2014-2015/web-media/ba-%28hons%29-web-media/" target="_blank">Web Media Students</a> at Ravensbourne.';
 }
-
 // adding it to the admin area
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
 

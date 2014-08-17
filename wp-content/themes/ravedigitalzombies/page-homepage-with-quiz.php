@@ -5,51 +5,37 @@ Template Name: Homepage with Quiz
 ?>
 
 <?php get_header(); ?>
-			
-			<div id="content" class="clearfix row">
-			
-				<div id="main" class="col-sm-12 clearfix" role="main">
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-					
-						<header>
+<div id="content" class="clearfix row">
+    <div id="main" class="col-sm-8 clearfix" role="main">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        
+        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+            <header>
 
-							<?php 
-								$post_thumbnail_id = get_post_thumbnail_id();
-								$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
-							?>
+    <?php 
+        $post_thumbnail_id = get_post_thumbnail_id();
+        $featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
+    ?>
+            </header>
+						
+            <section class="row post_content">
 
-							<div class="jumbotron" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-repeat: no-repeat; background-position: 0 0;">
-				
-								<div class="page-header">
-									<h1><?php bloginfo('title'); ?><small><?php echo get_post_meta($post->ID, 'custom_tagline' , true);?></small></h1>
-								</div>				
-								
-							</div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-md-4"><?php the_content(); ?></div>
+                    </div>
+                </div>
+
+            </section> <!-- end article header -->
 						
-						</header>
-						
-						<section class="row post_content">
-						
-							<div class="col-sm-8">
-						
-								<?php the_content(); ?>
-								
-							</div>
-							
-							<?php get_sidebar('sidebar2'); // sidebar 2 ?>
-													
-						</section> <!-- end article header -->
-						
-						<footer>
+            <footer>
 			
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-							
-						</footer> <!-- end article footer -->
+            <p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
+            
+            </footer> <!-- end article footer -->
 					
-					</article> <!-- end article -->
+        </article> <!-- end article -->
 					
 					<?php 
 						// No comments on homepage
@@ -72,12 +58,14 @@ Template Name: Homepage with Quiz
 					</article>
 					
 					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
-				<?php //get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+
+    </div> <!-- end #main -->
+
+    <div class="col-sm-4 sidebar">
+        <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+    </div><!--/span-->
+
+</div> <!-- end #content -->
 
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">

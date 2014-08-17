@@ -15,7 +15,7 @@
 						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					
-					<p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p>
+					<p class="pull-right">Developed by <a href="http://www.ravensbourne.ac.uk/courses/undergraduate-2014-2015/web-media/ba-%28hons%29-web-media/" target="_blank">Web Media Students</a> at Ravensbourne.</p>
 			
 					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
 				
