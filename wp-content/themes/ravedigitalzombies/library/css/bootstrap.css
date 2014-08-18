@@ -6985,9 +6985,12 @@ body {
     color: #000;
 }
 .box {
-    height: 200px;
+    padding: 0;
+    display: inline;
 }
-
+.main-content {
+    padding: 0;
+}
 
 
 

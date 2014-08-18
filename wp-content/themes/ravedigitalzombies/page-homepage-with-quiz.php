@@ -21,7 +21,7 @@ Template Name: Homepage with Quiz
 						
             <section class="row post_content">
 
-                <div class="col-sm-12">
+                <div class="col-sm-12 main-content">
 <?php the_content(); ?>
                 </div>
 
