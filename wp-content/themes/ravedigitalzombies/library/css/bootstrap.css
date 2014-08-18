@@ -6991,9 +6991,14 @@ body {
 .main-content {
     padding: 0;
 }
-
-
-
+.title p{
+    position: absolute;
+    line-height: 112px;
+    color: #fff;
+}
+.quiz_section:hover {
+    
+}
 
 
 
