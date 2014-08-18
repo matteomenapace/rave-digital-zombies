@@ -6994,6 +6994,15 @@ body {
 
 
 
+
+
+.title p{
+    position: absolute;
+    line-height: 112px;
+    color: #fff;
+}
+
+
 .modal-image-dark{
      position: absolute;
     width: 100%;
