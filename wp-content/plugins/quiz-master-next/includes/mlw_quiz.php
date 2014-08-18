@@ -447,7 +447,7 @@ function mlw_quiz_shortcode($atts)
 			$mlw_qmn_total_questions = $mlw_qmn_total_questions + 1;
 			$mlw_display .= "<div class='quiz_section slide".$mlw_qmn_section_count."'>";
 			$mlw_display .= "<span class='mlw_qmn_question' style='font-weight:bold;'>";
-			if ($mlw_quiz_options->question_numbering == 1) { $mlw_display .='<p>' .$mlw_qmn_total_questions.")"; }
+			if ($mlw_quiz_options->question_numbering == 1) { $mlw_display .='<p>' .$mlw_qmn_total_questions.") "; }
 			$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES)."</span><br />";
 			if ($mlw_question->question_type == 0)
 			{
