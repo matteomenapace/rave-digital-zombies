@@ -7002,6 +7002,16 @@ body {
 
 
 
+
+
+.title p{
+    position: absolute;
+    line-height: 112px;
+    color: #fff;
+    text-align: center;
+}
+
+
 .modal-image-dark{
      position: absolute;
     width: 100%;
