@@ -101,7 +101,7 @@ Template Name: Homepage with Quiz
 				$originalContent,
 				$newTitle,
 				// $newContent,
-				$modal = $('<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Modal title</h4></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-default btn-close" data-dismiss="modal">Done</button></div></div></div></div>'),
+				$modal = $('<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><div class="modal-image-dark"></div><h4 class="modal-title">Modal title</h4></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-default btn-close" data-dismiss="modal">Done</button></div></div></div></div>'),
 				newTitle = ''
 
 			// add a unique class to the question element
