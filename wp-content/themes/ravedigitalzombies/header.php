@@ -45,4 +45,4 @@
 		
 		</header> <!-- end header -->
 		
-		<div class="container">
+		<div class="container col-sm-9">
