@@ -60,10 +60,41 @@ Template Name: Homepage with Quiz
     </div> <!-- end #main -->
 
     <div class="col-sm-3 sidebar">
+       
+       <img class="logo" src="http://placehold.it/330x100/AA9C8F/ffffff&text=Logo+goes+here">
         <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
     </div><!--/span-->
 
 </div> <!-- end #content -->
+
+<!-- loads welcome modal on page load -->
+<script type="text/javascript">
+jQuery(document).ready(function($)
+	{
+        $(window).load(function(){
+        $('#welcome').modal('show');
+    });
+    })
+</script>
+
+<!-- welcome modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#welcome">Welcome</button>
+
+<div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="container"><h1>Welcome</h1>
+      <p>asdfijf diohfg wf
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end welcome modal -->
+
+
+
+
 
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">

@@ -6972,6 +6972,7 @@ blockquote.pull-left {
 }
 body {
     background-color: #eee;
+    padding-top: 0;
 }
 .sidebar {
     position: fixed;
@@ -6979,7 +6980,7 @@ body {
     right: 0;
     background-color: #fff;
     height: 100%;
-    padding: 100px 0 0;
+    padding: 0;
 }
 .sidebar a {
     color: #000;
@@ -6991,15 +6992,9 @@ body {
 .main-content {
     padding: 0;
 }
-.title p{
-    position: absolute;
-    line-height: 112px;
-    color: #fff;
-}
 .quiz_section:hover {
     
 }
-
 
 
 
