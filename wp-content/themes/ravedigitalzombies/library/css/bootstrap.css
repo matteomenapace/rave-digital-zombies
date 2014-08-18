@@ -7007,9 +7007,9 @@ body {
 
 .title p{
     position: absolute;
-    line-height: 112px;
     color: #fff;
-    text-align: center;
+    bottom: 0;
+    margin: 20px;
 }
 
 
