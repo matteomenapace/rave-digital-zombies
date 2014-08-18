@@ -651,7 +651,7 @@ function mlw_quiz_shortcode($atts)
 				$mlw_display .= "<br /><br />";
 			}
 			$mlw_display .= "</div>";
-			if ( $mlw_quiz_options->pagination == 0) { $mlw_display .= "<br />"; }
+			if ( $mlw_quiz_options->pagination == 0) { $mlw_display .= ""; }
 		}
 		
 		//Display comment box if needed
