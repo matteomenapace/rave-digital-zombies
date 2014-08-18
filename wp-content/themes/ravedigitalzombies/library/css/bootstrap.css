@@ -6946,7 +6946,7 @@ body {
     right: 0;
     background-color: #fff;
     height: 100%;
-    padding-top: 100px;
+    padding: 100px 0 0;
 }
 .sidebar a {
     color: #000;
