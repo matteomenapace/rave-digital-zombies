@@ -59,7 +59,7 @@ Template Name: Homepage with Quiz
 
     </div> <!-- end #main -->
 
-    <div class="col-sm-4 sidebar">
+    <div class="col-sm-3 sidebar">
         <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
     </div><!--/span-->
 
