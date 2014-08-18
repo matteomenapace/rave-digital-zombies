@@ -5106,17 +5106,18 @@ button.close {
     line-height: 1.428571429;
 }
 
+.modal-title img{
+    height: 254px;
+}
 .modal-body {
     padding: 20px;
     color: #AA9C8F;
 }
-
-
-
 .modal-header img{
     text-align: center;
-    width: 100%;
+    width: auto;
     top: 0;
+    max-height: 234px;
 }
 
 .modal-header p{
