@@ -5120,10 +5120,10 @@ button.close {
 }
 
 .modal-header p{
+    display: inline-block;
     margin: 0 auto;
     left: 0;
     right: 0;
-    position: absolute;
     line-height: 236px;
     color: #fff;
 
