@@ -6993,17 +6993,19 @@ body {
 .main-content {
     padding: 0;
 }
-.quiz_section:hover {
-    
+.box img:hover {
+   cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-0-transition: all .3s ease;
+	transition: all .3s ease;
 }
 #main article img {
     width: 100%;
 }
-.col-sm-12 {
-    padding: 0;
-}
 .quiz_begin {
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .title p{
