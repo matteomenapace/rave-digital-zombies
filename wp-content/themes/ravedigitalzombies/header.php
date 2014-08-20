@@ -16,9 +16,10 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/bootstrap.css">		
+		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/bootstrap.css">	
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/style.css">
-
+		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/custom-style.css">
+        
 
 		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
 			<!-- media-queries.js (fallback) -->
