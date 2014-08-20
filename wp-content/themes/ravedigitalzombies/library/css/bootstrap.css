@@ -7080,30 +7080,3 @@ body {
 }
 .modal-body p {
 }
-.modal-body input[type="radio"] {
-  display: none;
-}
-.modal-body label {
-  cursor: pointer;
-}
-.modal-body input[type="radio"] + label:before {
-  border: 1px solid #AA9C8F;
-  content: "\00a0";
-  display: inline-block;
-  font: 16px/1em sans-serif;
-  height: 16px;
-  margin: 0 .25em 0 0;
-  padding:0;
-  vertical-align: top;
-  width: 16px;
-  border-radius: 50%;
-}
-.modal-body input[type="radio"]:checked + label:before {
-  background: #fff;
-  color: #AA9C8F;
-  content: "\2713";
-  text-align: center;
-}
-.modal-body input[type="radio"]:checked + label:after {
-  font-weight: bold;
-}

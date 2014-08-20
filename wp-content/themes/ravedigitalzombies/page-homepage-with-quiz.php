@@ -67,18 +67,34 @@ Template Name: Homepage with Quiz
 
 </div> <!-- end #content -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- loads welcome modal on page load -->
 <script type="text/javascript">
-// disable until development is finished jQuery(document).ready(function($)
+/* disable until development is finished jQuery(document).ready(function($)
 	{
         $(window).load(function(){
         $('#welcome').modal('show');
     });
-    })
+*/
 </script>
 
 <!-- welcome modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target="#welcome">Welcome</button>
+<!-- <button class="btn btn-primary" data-toggle="modal" data-target="#welcome">Welcome</button>
 
 <div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -89,7 +105,7 @@ Template Name: Homepage with Quiz
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- end welcome modal -->
 
 
@@ -97,12 +113,12 @@ Template Name: Homepage with Quiz
 
 
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">
+<!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">
   Launch demo modal
-</button>
+</button> -->
 
 <!-- Modal -->
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -118,11 +134,11 @@ Template Name: Homepage with Quiz
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <script type="text/javascript">
 
-	jQuery(document).ready(function($)
+	/*jQuery(document).ready(function($)
 	{
 		// we select all the .quiz_section elements, minus the beginning and end bits
 		$('.quiz_section:not(.quiz_begin):not(.quiz_end)').each(function(index)
@@ -163,8 +179,24 @@ Template Name: Homepage with Quiz
 			// empty the question box and append new title and modal
 			$question.empty().append($newTitle).append($modal)
 		})
-	})
+	})*/
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php get_footer(); ?>
