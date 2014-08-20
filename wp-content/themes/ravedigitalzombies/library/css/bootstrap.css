@@ -6975,20 +6975,41 @@ body {
     background-color: #eee;
     padding-top: 0;
 }
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
+.main-container {
     background-color: #fff;
-    height: 100%;
-    padding: 0;
+    padding: 10px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
 }
-.sidebar a {
-    color: #000;
+#main article img  {
+    padding: 10px;
 }
 .box {
     padding: 0;
     display: inline;
+}
+.box .title {
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    width: 100%;
+}
+.question .title {
+    font-size: 20px;
+    color: #fff;
+}
+.sidebar {
+    position: fixed;
+    right: 33px;
+    top: 0;
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 0;
+    width: 20%;
+}
+.sidebar a {
+    color: #000;
 }
 .main-content {
     padding: 0;
@@ -7038,9 +7059,27 @@ body {
         /* IE6-8 */
 }
 
-
-
-
+.form-welcome {
+    margin: 30px 20px 15px;
+}
+.modal-backdrop {
+    background-color: #AA9C8F;
+}
+.modal-backdrop.in {
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+.modal-content {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+.modal-body h1, .modal-body p {
+    text-align: center; 
+}
+.modal-body p {
+}
 .modal-body input[type="radio"] {
   display: none;
 }
