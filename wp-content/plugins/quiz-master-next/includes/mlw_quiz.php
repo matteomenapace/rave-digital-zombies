@@ -440,38 +440,48 @@ function mlw_quiz_shortcode($atts)
 			$mlw_display .= mlwDisplayContactInfo($mlw_quiz_options);
 		}
 		$mlw_display .= "</div>";
+
+		$total_questions = count($mlw_questions);
 		
 		//Display the questions
-		foreach($mlw_questions as $mlw_question) {
-
+		foreach($mlw_questions as $mlw_question) 
+		{
 
 			/*echo('<pre>');
 			print_r($mlw_question);
 			echo('</pre>');*/
 
+			$question_count = $mlw_qmn_section_count;
 			$mlw_qmn_section_count = $mlw_qmn_section_count + 1;
 			$mlw_qmn_total_questions = $mlw_qmn_total_questions + 1;
-			$mlw_display .= "<div class='quiz_section slide".$mlw_qmn_section_count." question col-sm-6 box'>";
-			$mlw_display .= "<div class='title' data-toggle='modal' data-target='#modal".$mlw_qmn_section_count."'>";
-			$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES);
-			//$mlw_display .= "<span class='mlw_qmn_question' style='font-weight:bold;'>";
-			if ($mlw_quiz_options->question_numbering == 1) { 
-				$mlw_display .= $mlw_qmn_section_count. "/" .$mlw_qmn_total_questions;
-			}
-			//$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES)."</span><br />";
 
-			// question's image
-			// by default it's a picture of the building
-			$mlw_question->question_image = "http://www.d-techdirect.com/wp/wp-content/uploads/2011/01/Ravensbourne-College-D-Tech-Ltd-by-Sam-Mellish-9316.jpg";
-			if ($mlw_question->hints != "") // if there is a hint, then use the hint as the src of our img
-			{
-				$mlw_question->question_image = $mlw_question->hints;
-			}
-
-			$mlw_display .= "<img src='" . $mlw_question->question_image  . "'>";
+			$mlw_display .= "<div class='quiz_section slide".$question_count." question col-sm-6 box'>";
 
 
-			$mlw_display .= "<div class='modal fade' tabindex='-1' role='dialog' aria-labelledby='modalTitle' aria-hidden='true' id='modal".$mlw_qmn_section_count."'>";
+
+			// quiz title
+			$mlw_display .= "<div class='title' data-toggle='modal' data-target='#modal".$question_count."'>";
+				
+				$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES);
+				//$mlw_display .= "<span class='mlw_qmn_question' style='font-weight:bold;'>";
+				if ($mlw_quiz_options->question_numbering == 1) { 
+					$mlw_display .= $question_count. "/" .$total_questions;
+				}
+				//$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES)."</span><br />";
+
+				// question's image
+				// by default it's a picture of the building
+				$mlw_question->question_image = "http://www.d-techdirect.com/wp/wp-content/uploads/2011/01/Ravensbourne-College-D-Tech-Ltd-by-Sam-Mellish-9316.jpg";
+				if ($mlw_question->hints != "") // if there is a hint, then use the hint as the src of our img
+				{
+					$mlw_question->question_image = $mlw_question->hints;
+				}
+
+				$mlw_display .= "<img src='" . $mlw_question->question_image  . "'>";
+
+			$mlw_display .= "</div>"; // end .title
+
+			$mlw_display .= "<div class='modal fade' tabindex='-1' role='dialog' aria-labelledby='modalTitle' aria-hidden='true' id='modal".$question_count."'>";
         		$mlw_display .= "<div class='modal-dialog'>";
 					$mlw_display .= "<div class='modal-content'>";
 						$mlw_display .= "<div class='modal-header' style='background-image:url(".$mlw_question->question_image.");'>";
@@ -699,8 +709,6 @@ function mlw_quiz_shortcode($atts)
 			$mlw_display .= "</div>"; // end modal
 
 			$mlw_display .= "</div>"; // end question
-
-			$mlw_display .= "</div>"; // end ????
 
 
 			if ( $mlw_quiz_options->pagination == 0) { $mlw_display .= ""; }
