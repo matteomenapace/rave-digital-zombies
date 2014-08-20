@@ -1,0 +1,66 @@
+body:before
+{
+	/*display: block;*/
+	content: " ";
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	/*background-image: url('http://induction.baddeo.com/wp-content/uploads/waves.jpg');*/
+	background-image: url('http://induction.baddeo.com/wp-content/uploads/cables-pale.jpg');
+	background-image: url('http://induction.baddeo.com/wp-content/uploads/cables.jpg');
+	background-image: url('http://induction.baddeo.com/wp-content/uploads/neurons.jpg');
+	background-image: url('http://www.ravensbourne.ac.uk/media/44612/jb0056_Background.jpg');
+
+	background-position: left bottom;
+	background-size: cover; 
+}
+
+.container
+{
+	max-width: 960px;
+}
+
+#main article 
+{
+	border-bottom: none; 
+}
+
+.main-container 
+{
+	/*background: rgba(0, 0, 0, 0.75);	*/
+}
+
+#content
+{
+	padding-top: 30px;
+}
+
+
+
+/* LOGO */
+
+a.logo 
+{
+	position: fixed;
+	bottom: 20px !important;
+	left: 20px;
+	z-index: 999999;
+	width: 120px;
+	display: block;
+	background-image: url('http://www.ravensbourne.ac.uk/assets/img/logo.png');
+	background-repeat: no-repeat;
+	background-size: 100% !important;
+	height: 80px;
+	text-indent: -9999px;
+}	
+
+/* TYPOGRAPHY */
+
+html, body 
+{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 14px;
+}
