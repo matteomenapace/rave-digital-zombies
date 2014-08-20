@@ -106,8 +106,7 @@ Template Name: Home with Quiz
 
 <!-- loads welcome modal on page load -->
 <script type="text/javascript">
-// disable until development is finished //
-    jQuery(document).ready(function($)
+// disable until development is finished  jQuery(document).ready(function($)
 	{
         $(window).load(function(){
         $('#welcome').modal('show');

@@ -462,29 +462,34 @@ function mlw_quiz_shortcode($atts)
 			// quiz title
 			$mlw_display .= "<div class='title' data-toggle='modal' data-target='#modal".$question_count."'>";
 				
-				$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES);
+				$mlw_display .= "<p>" . $mlw_question->question_name. "<br><span class='badge'>";
 				//$mlw_display .= "<span class='mlw_qmn_question' style='font-weight:bold;'>";
 				if ($mlw_quiz_options->question_numbering == 1) { 
-					$mlw_display .= $question_count. "/" .$total_questions;
+					$mlw_display .= $question_count. "/" .$total_questions . "</span></p>";
 				}
-				//$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES)."</span><br />";
+				//$mlw_display .= htmlspecialchars_decode($mlw_question->question_name, ENT_QUOTES)."</span><br />"
 
 				// question's image
 				// by default it's a picture of the building
+            
 				$mlw_question->question_image = "http://www.d-techdirect.com/wp/wp-content/uploads/2011/01/Ravensbourne-College-D-Tech-Ltd-by-Sam-Mellish-9316.jpg";
 				if ($mlw_question->hints != "") // if there is a hint, then use the hint as the src of our img
 				{
 					$mlw_question->question_image = $mlw_question->hints;
 				}
 
+                $mlw_display .= "<div class='image-gradient-thumb'>";
 				$mlw_display .= "<img src='" . $mlw_question->question_image  . "'>";
+                $mlw_display .= "</div>";
 
 			$mlw_display .= "</div>"; // end .title
 
 			$mlw_display .= "<div class='modal fade' tabindex='-1' role='dialog' aria-labelledby='modalTitle' aria-hidden='true' id='modal".$question_count."'>";
         		$mlw_display .= "<div class='modal-dialog'>";
 					$mlw_display .= "<div class='modal-content'>";
-						$mlw_display .= "<div class='modal-header' style='background-image:url(".$mlw_question->question_image.");'>";
+                        $mlw_display .= "<div class='image-gradient'>";
+				        $mlw_display .= "<div class='modal-header' style='background-image:url(".$mlw_question->question_image.");'>";
+                        $mlw_display .= "</div>";
     						//$mlw_display .= "<div class='modal-image-dark'></div>";
     						$mlw_display .= "<h4 class='modal-title'>".$mlw_question->question_name."</h4>";
 						$mlw_display .= "</div>";
@@ -565,7 +570,7 @@ function mlw_quiz_shortcode($atts)
 						if ($mlw_qmn_answer_each[0] != "")
 						{
 							$mlw_display .= "<input type='hidden' name='question".$mlw_question->question_id."' value='This value doesn't matter' />";
-							$mlw_display .= "<input type='checkbox' name='question".$mlw_question->question_id."_".$mlw_answer_total."' id='question".$mlw_question->question_id."_".$mlw_answer_total."' value='".esc_attr($mlw_qmn_answer_each[0])."' /> <label for='question".$mlw_question->question_id."_".$mlw_answer_total."'>".htmlspecialchars_decode($mlw_qmn_answer_each[0], ENT_QUOTES)."</label>";
+							$mlw_display .= "<input type='checkbox' name='question".$mlw_question->question_id."_".$mlw_answer_total."' id='question".$mlw_question->question_id."_".$mlw_answer_total."' value='".esc_attr($mlw_qmn_answer_each[0])."' /> <label for='question".$mlw_question->question_id."_".$mlw_answer_total."'>".htmlspecialchars_decode($mlw_qmn_answer_each[0], ENT_QUOTES)."</label><br>";
 							
 						}
 					}
