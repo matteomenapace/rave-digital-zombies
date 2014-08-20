@@ -137,7 +137,7 @@ Template Name: Homepage with Quiz
 
 			// add a unique class to the question element
 				// maybe this is not needed..	
-			$question.addClass('question col-sm-4 box')
+			$question.addClass('question col-sm-6 box')
 
 			// extract the newTitle
 			newTitle = $originalTitle.html() 	
