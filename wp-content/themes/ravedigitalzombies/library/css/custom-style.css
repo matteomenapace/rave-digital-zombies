@@ -53,6 +53,7 @@ body {
 }
 .quiz_begin {
     padding-left: 15px;
+    text-align: center;
 }
 .title p {
     position: absolute;
@@ -145,18 +146,17 @@ h4.modal-title {
     margin: 0;
     padding: 10px;
 }
-
-.quiz_begin p{
-     display: inline-block;
+.quiz_begin p {
+    display: inline-block;
     color: #AA9C8F;
     font-size: 20px;
     text-align: center;
 }
-
-.quiz_begin input[type="text"]{
- display: inline-block;
-    border: 0;
+.quiz_begin input[type="text"] {
+    display: inline-block;
+    border: solid 1px;
     color: #AA9C8F;
     font-size: 20px;
-    font-style: italic;
+    padding: 15px;
+    margin-left: 20px;
 }
