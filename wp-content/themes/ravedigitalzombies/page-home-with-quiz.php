@@ -22,7 +22,6 @@ Template Name: Home with Quiz
             <section class="row post_content">
 
                 <div class="col-sm-12 main-content">
-<!-- loads the post content ?php the_content(); ?> -->
 <!-- static content with style -->
 
 <!---->
@@ -48,76 +47,15 @@ Template Name: Home with Quiz
 <!-- questions -->
 <div class="main-container col-sm-10 row">
    
+            <?php the_content(); ?>
 
-<div class="quiz_section slide{{question.number}} question box col-md-6">
-    <div class="title" data-toggle="modal" data-target="#modal{{0}}">
 
-        On which floors are the toilets?
-        <span class="badge">1/10</span>
-    </div>
-    <!--  we're using the HINT filed to store the image's URL  -->
-    <!--  if no image provided, we use a placeholder image (Rave building from the outside  -->
-    <img src="http://localhost:8888/ravedigitalzombies/wp-content/uploads/2014/08/building.png">
-</div>
 
-<div class="quiz_section slide{{question.number}} question box col-md-6">
-    <div class="title" data-toggle="modal" data-target="#modal{{0}}">
-
-        On which floors are the toilets?
-        <span class="badge">1/10</span>
-    </div>
-    <!--  we're using the HINT filed to store the image's URL  -->
-    <!--  if no image provided, we use a placeholder image (Rave building from the outside  -->
-    <img src="http://localhost:8888/ravedigitalzombies/wp-content/uploads/2014/08/rave-lates.png">
-</div>
-
-<div class="quiz_section slide{{question.number}} question box col-md-6">
-    <div class="title" data-toggle="modal" data-target="#modal{{0}}">
-
-        On which floors are the toilets?
-        <span class="badge">1/10</span>
-    </div>
-    <!--  we're using the HINT filed to store the image's URL  -->
-    <!--  if no image provided, we use a placeholder image (Rave building from the outside  -->
-    <img src="http://localhost:8888/ravedigitalzombies/wp-content/uploads/2014/08/fire-point.png">
-</div>
-
-<div class="quiz_section slide{{question.number}} question box col-md-6">
-    <div class="title" data-toggle="modal" data-target="#modal{{0}}">
-
-        On which floors are the toilets?
-        <span class="badge">1/10</span>
-    </div>
-    <!--  we're using the HINT filed to store the image's URL  -->
-    <!--  if no image provided, we use a placeholder image (Rave building from the outside  -->
-    <img src="http://localhost:8888/ravedigitalzombies/wp-content/uploads/2014/08/mezz.png">
-</div>
 
 </div>
 
 
-<!-- modal -->
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" id="modal1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header" style="background-image:url('{{http://localhost:8888/ravedigitalzombies/wp-content/uploads/2014/08/rave-lates.png}}');">
-                <div class="modal-image-dark"></div>
-                <h4 class="modal-title" {{On which floors are the toilets?}}</h4>
-            </div>
-            <div class="modal-body">
-                <br>
-                <!-- let's try and get rid of these <br> -->
-                <input type="radio" name="question{{2}}" id="question{{2_1}}" value="{{All floors}}">
-                <label for="question{{2_1}}">{{All floors}}</label>
 
-                <!--  and more answers/options here... -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Done</button>
-            </div>
-        </div>
-    </div>
-</div>
                
                
                
@@ -211,10 +149,10 @@ Template Name: Home with Quiz
 
 
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
-	// disabled so we can see static content 
-    // jQuery(document).ready(function($)
+ disabled so we can see static content 
+     jQuery(document).ready(function($)
 	{
 		// we select all the .quiz_section elements, minus the beginning and end bits
 		$('.quiz_section:not(.quiz_begin):not(.quiz_end)').each(function(index)
@@ -257,6 +195,6 @@ Template Name: Home with Quiz
 		})
 	})
 
-</script>
+</script>-->
 
 <?php get_footer(); ?>
