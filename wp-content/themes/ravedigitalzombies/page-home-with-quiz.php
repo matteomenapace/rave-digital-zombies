@@ -156,8 +156,7 @@ Template Name: Home with Quiz
     
 </script>
 
-<!-- welcome modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target="#welcome">Welcome</button>
+
 
 <div class="modal fade animated" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg">

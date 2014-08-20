@@ -488,11 +488,12 @@ function mlw_quiz_shortcode($atts)
         		$mlw_display .= "<div class='modal-dialog'>";
 					$mlw_display .= "<div class='modal-content'>";
                         $mlw_display .= "<div class='image-gradient'>";
+                        $mlw_display .= "</div>";
 				        $mlw_display .= "<div class='modal-header' style='background-image:url(".$mlw_question->question_image.");'>";
                         $mlw_display .= "</div>";
     						//$mlw_display .= "<div class='modal-image-dark'></div>";
     						$mlw_display .= "<h4 class='modal-title'>".$mlw_question->question_name."</h4>";
-						$mlw_display .= "</div>";
+						
 			
 
 						$mlw_display .= "<div class='modal-body'>";
@@ -1405,7 +1406,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter group name' />";
 			$mlw_contact_display .= "<br /><br />";
 
 		}
@@ -1440,7 +1441,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			$mlw_contact_display .= "<p style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Enter group name' />";
 			$mlw_contact_display .= "<br /><br />";
 		}
 		if ($mlw_quiz_options->user_comp != 2)
