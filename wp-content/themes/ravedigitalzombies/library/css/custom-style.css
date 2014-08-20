@@ -113,6 +113,13 @@ body {
     opacity: 0.7;
     filter: alpha(opacity=50);
 }
+.modal-header {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .modal-content {
     border-radius: 0;
     -webkit-box-shadow: none;
@@ -123,8 +130,12 @@ body {
     height: 100px;
 }
 h4.modal-title {
-    padding: 120px;
+    padding: 120px 20px;
+    text-align: center;
     color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 .modal-body h1,
 .modal-body p {
