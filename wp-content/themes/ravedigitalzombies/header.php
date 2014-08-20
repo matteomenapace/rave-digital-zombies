@@ -16,7 +16,8 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/bootstrap.css">	
+		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/animate.css">
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/style.css">
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/custom-style.css">
         

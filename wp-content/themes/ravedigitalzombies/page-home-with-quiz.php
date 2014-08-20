@@ -24,26 +24,7 @@ Template Name: Home with Quiz
                 <div class="col-sm-12 main-content">
 <!-- static content with style -->
 
-<!---->
-<div class="main-container col-sm-10 row">
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Enter group name">
-                <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-            </div>
-            <!-- /input-group -->
-        </div>
-        <!-- /.col-lg-6 -->
-    </div>
-</div>
 
-
-<br>
-<br>
-<br><br>
 <!-- questions -->
 <div class="main-container col-sm-10 row">
    
@@ -97,103 +78,113 @@ Template Name: Home with Quiz
 
     </div> <!-- end #main -->
 
-    <div class="col-sm-3 sidebar">
-       
-        <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-    </div><!--/span-->
+<div class="col-sm-3 sidebar">
+
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/ravedz" data-widget-id="502097294963904515" data-theme="light" data-link-color="#AA9C8F" data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="300">#ravedz Tweets</a>
+    <script>
+        ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + "://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");
+    </script>
+    
+    <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+</div>
+<!--/span-->
 
 </div> <!-- end #content -->
 
+
+<?php if(empty($_POST)) : ?>
+
 <!-- loads welcome modal on page load -->
 <script type="text/javascript">
-// disable until development is finished  jQuery(document).ready(function($)
+
+    // disable until development is finished  
+    jQuery(document).ready(function($)
 	{
-        $(window).load(function(){
-        $('#welcome').modal('show');
-    });
+        var $modal = $('#welcome');
+        
+        // launch the modal
+        $modal.modal(
+        {
+            backdrop: 'static',
+            keyboard: false
+        });
+        // .. and shows the modal by default
+        
+        // let's add an event listener to the "Enter" button inside the modal
+        // and to the form submit
+        $("#welcome-form").submit(onSubmit)
+        $("#welcome-submit-btn").click(onSubmit) 
+        
+        function onSubmit(event)
+        {
+            // don't refresh the page, or submit the form...
+            event.preventDefault();
+            
+//            alert('you clicked me!');
+                
+            // let's see what they typed in the input...
+            var input = $("#welcome-input").val()
+            
+            if (input == "a") // TODO change password later
+            {
+                // hey little hacker, you found the password :)
+                // cool, you're in
+                $modal.modal('hide');
+            }
+            else
+            {
+                // no mate, try again
+                // TODO shake the password input
+//                alert('no mate, try again');
+                var animationType = 'wobble'//'shake';
+                $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $modal.removeClass(animationType)
+                });
+
+            }
+        }
     })
+    
 </script>
 
 <!-- welcome modal -->
 <button class="btn btn-primary" data-toggle="modal" data-target="#welcome">Welcome</button>
 
-<div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade animated" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
                 <h1>Welcome</h1>
-                <p>Please enter the password you were given below to get started.</p>
+                <p>Please enter the code you were given below to get started.</p>
 
-                <form class="form-inline form-welcome" role="form">
+                <form id="welcome-form" class="form-inline form-welcome" role="form">
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span>
                             </div>
-                            <input class="form-control" type="email" placeholder="Enter password">
+                            <input id="welcome-input" class="form-control" type="text" placeholder="Enter the code">
                         </div>
                     </div>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Enter site</button>
+                <button id="welcome-submit-btn" type="button" class="btn btn-primary">Enter site</button>
             </div>
         </div>
     </div>
 </div>
 <!-- end welcome modal -->
 
+<?php endif; ?>
 
-
-
-
-
-
-<!--<script type="text/javascript">
-
- disabled so we can see static content 
-     jQuery(document).ready(function($)
-	{
-		// we select all the .quiz_section elements, minus the beginning and end bits
-		$('.quiz_section:not(.quiz_begin):not(.quiz_end)').each(function(index)
-		{
-			var $question = $(this), 
-				$originalTitle = $question.find('.mlw_qmn_question'),
-				$originalContent,
-				$newTitle,
-				// $newContent,
-				$modal = $('<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><div class="modal-image-dark"></div><h4 class="modal-title">Modal title</h4></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-default btn-close" data-dismiss="modal">Done</button></div></div></div></div>'),
-				newTitle = ''
-
-			// add a unique class to the question element
-				// maybe this is not needed..	
-			$question.addClass('question col-sm-6 box')
-
-			// extract the newTitle
-			newTitle = $originalTitle.html() 	
-
-			// console.log($question)	
-			// console.log($originalTitle.html())	
-
-			// build the new title
-			$newTitle = $('<div class="title" data-toggle="modal" data-target="#modal' + index + '"></div>').html(newTitle)
-
-			// cut the original title	
-			$originalTitle.detach()
-
-			// wrap what's left of the the content in the modal
-			$modal.find('.modal-body').html($question.html())
-
-			// set the modal id
-			$modal.attr('id', 'modal' + index)
-
-			// set the modal title (as the question's title)
-			$modal.find('.modal-title').html(newTitle)
-
-			// empty the question box and append new title and modal
-			$question.empty().append($newTitle).append($modal)
-		})
-	})
-
-</script>-->
 
 <?php get_footer(); ?>

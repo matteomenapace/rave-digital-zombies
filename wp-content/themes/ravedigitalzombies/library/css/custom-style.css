@@ -129,4 +129,34 @@ h4.modal-title {
 .modal-body p {
     text-align: center;
 }
-.modal-body p {}
+.modal-footer button:focus {
+    background-color: #AA9C8F;
+}
+.quiz_section input[type="submit"] {
+    font-size: 2em;
+    width: 100%;
+    border: 0;
+    color: #fff;
+    background-color: #AA9C8F;
+    height: 60px;
+    margin-top: 10px;
+}
+.quiz_end {
+    margin: 0;
+    padding: 10px;
+}
+
+.quiz_begin p{
+     display: inline-block;
+    color: #AA9C8F;
+    font-size: 20px;
+    text-align: center;
+}
+
+.quiz_begin input[type="text"]{
+ display: inline-block;
+    border: 0;
+    color: #AA9C8F;
+    font-size: 20px;
+    font-style: italic;
+}

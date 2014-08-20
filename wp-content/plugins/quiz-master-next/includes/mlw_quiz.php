@@ -736,7 +736,7 @@ function mlw_quiz_shortcode($atts)
 		}
 		$mlw_display .= "<br />";
 		$mlw_qmn_section_count = $mlw_qmn_section_count + 1;
-		$mlw_display .= "<div class='quiz_section slide".$mlw_qmn_section_count." quiz_end'>";
+		$mlw_display .= "<div class='quiz_section slide".$mlw_qmn_section_count."col-sm-12 quiz_end'>";
 		if ($mlw_quiz_options->message_end_template != '')
 		{
 			$mlw_message_end = htmlspecialchars_decode($mlw_quiz_options->message_end_template, ENT_QUOTES);
@@ -1404,7 +1404,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		$current_user = wp_get_current_user();
 		if ($mlw_quiz_options->user_name != 2)
 		{
-			$mlw_contact_display .= "<span style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</span><br />";
+			$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
 			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' />";
 			$mlw_contact_display .= "<br /><br />";
 
@@ -1439,8 +1439,8 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		//See if the site wants to ask for any contact information, then ask for it
 		if ($mlw_quiz_options->user_name != 2)
 		{
-			$mlw_contact_display .= "<span style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</span><br />";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='' />";
+			$mlw_contact_display .= "<p style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</p>";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' />";
 			$mlw_contact_display .= "<br /><br />";
 		}
 		if ($mlw_quiz_options->user_comp != 2)
