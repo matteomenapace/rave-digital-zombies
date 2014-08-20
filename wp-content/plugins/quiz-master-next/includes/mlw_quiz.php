@@ -488,11 +488,12 @@ function mlw_quiz_shortcode($atts)
         		$mlw_display .= "<div class='modal-dialog'>";
 					$mlw_display .= "<div class='modal-content'>";
                         $mlw_display .= "<div class='image-gradient'>";
+                        $mlw_display .= "</div>";
 				        $mlw_display .= "<div class='modal-header' style='background-image:url(".$mlw_question->question_image.");'>";
                         $mlw_display .= "</div>";
     						//$mlw_display .= "<div class='modal-image-dark'></div>";
     						$mlw_display .= "<h4 class='modal-title'>".$mlw_question->question_name."</h4>";
-						$mlw_display .= "</div>";
+						
 			
 
 						$mlw_display .= "<div class='modal-body'>";
