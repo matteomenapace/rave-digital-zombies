@@ -391,11 +391,11 @@ input:focus{
     letter-spacing: -2px;
     margin: 0;
     display: block;
+    margin-bottom: 50px;
 }
 
 .results_container{
-    text-align: center;
-    padding: 25px;
+    padding: 15px;
 }
 
 .results_question{
