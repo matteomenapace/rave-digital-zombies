@@ -51,16 +51,16 @@ body {
     padding: 0 20px;
 }
 #main article img {
-    width: 100%;
+    max-width: 100%;
     max-height: 240px;
 }
 .quiz_begin {
     padding-left: 10px;
-padding-right: 10px;
-text-align: center;
-background-color: #749ba0;
-margin: -10px;
-margin-bottom: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background-color: #749ba0;
+    margin: -10px;
+    margin-bottom: 10px;
 }
 .title p {
     position: absolute;
@@ -194,16 +194,14 @@ h4.modal-title {
 }
 .quiz_begin input[type="text"] {
     border: 0;
-color: #fff;
-background-color: #749ba0;
-font-size: 2em;
-padding: 15px 30px;
-width: 100%;
-margin: 0;
-text-align: center;
+    color: #fff;
+    background-color: #749ba0;
+    font-size: 2em;
+    padding: 15px 30px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
 }
-
-
 .quiz_begin ::-webkit-input-placeholder {
     color: #fff;
     opacity: 0.4;
@@ -217,11 +215,6 @@ text-align: center;
 .quiz_begin :-ms-input-placeholder {
     color: #fff;
 }
-
-
-
-
-
 /* WELCOME MODAL */
 
 .welcome-modal h1 {
@@ -235,51 +228,55 @@ text-align: center;
     letter-spacing: -2px;
     margin: 0;
 }
+.page-title h1 {
+    position: relative;
+    float: left;
+    background: #333333;
+    color: #ffffff;
+    padding: 10px 30px 10px 30px;
+    font-size: 90px;
+    line-height: 1em;
+    letter-spacing: -2px;
+    margin: -10px -10px 20px
+}
 .welcome-modal p {
     /*color: #749ba0 !important;*/
     color: #000;
     display: inline-block;
-<<<<<<< HEAD
     padding-top: 30px;
     font-size: 24px;
-    }
-
-#welcome-input{
+}
+#welcome-input {
     border: 0;
     /*border-bottom: 1px dotted #749ba0;*/
     color: #749ba0;
     font-size: 24px;
     margin-left: 6px;
     width: 105px;
-}  
-
-
-.welcome-modal ::-webkit-input-placeholder {
+}
+.welcome-modal::-webkit-input-placeholder {
     color: #749ba0;
     opacity: 0.4;
     border-bottom: 1px dotted #749ba0;
 }
-.welcome-modal :-moz-placeholder {
+.welcome-modal:-moz-placeholder {
     /* Firefox 18- */
     color: #749ba0;
     opacity: 0.4;
     border-bottom: 1px dotted #749ba0;
 }
-.welcome-modal ::-moz-placeholder {
+.welcome-modal::-moz-placeholder {
     /* Firefox 19+ */
     color: #749ba0;
     opacity: 0.4;
     border-bottom: 1px dotted #749ba0;
 }
-.welcome-modal :-ms-input-placeholder {
+.welcome-modal:-ms-input-placeholder {
     color: #749ba0;
     opacity: 0.4;
     border-bottom: 1px dotted #749ba0;
 }
-
-
-
-.welcome-modal-btn{
+.welcome-modal-btn {
     margin: 1em 0;
     display: inline-block;
     margin-top: 50px;
@@ -288,7 +285,6 @@ text-align: center;
     width: 100%;
 }
 .welcome-modal-btn {
-
     line-height: 3;
     text-transform: uppercase;
     cursor: pointer;
@@ -341,28 +337,20 @@ input[type="radio"] + label:before {
     border-radius: 50%;
 }
 input[type="radio"]:checked + label:before {
-<<<<<<< HEAD
-  background: #fff;
-  color: #749ba0;
-  content: "\2713";
+    background: #fff;
+    color: #749ba0;
+    content: "\2713";
 }
-
-input:focus{
+input:focus {
     outline: 0;
 }
-
-#mlw_error_message{
+#mlw_error_message {
     position: relative;
     top: 10px;
 }
-
-#mlw_error_message_bottom{
-    color:#5b8186;
+#mlw_error_message_bottom {
+    color: #5b8186;
 }
-
-
-
-
 .twitter-gradient {
     margin-bottom: 20px;
     background: #e8e8e8;
@@ -382,4 +370,3 @@ input:focus{
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e8e8e8', GradientType=0);
     /* IE6-9 */
 }
-
