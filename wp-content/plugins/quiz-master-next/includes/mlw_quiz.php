@@ -363,8 +363,8 @@ function mlw_quiz_shortcode($atts)
 				var x=document.forms['quizForm']['mlwUserName'].value;
 				if (x==null || x=='')
 				  {
-				  	  document.getElementById('mlw_error_message').innerHTML = '**Name must be filled out!**';
-				  	  document.getElementById('mlw_error_message_bottom').innerHTML = '**Name must be filled out!**';
+				  	  document.getElementById('mlw_error_message').innerHTML = 'Please enter your group name';
+				  	  document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your group name';
 					  return false;
 				  }";
 		}
@@ -432,8 +432,8 @@ function mlw_quiz_shortcode($atts)
 		$mlw_message_before = htmlspecialchars_decode($mlw_quiz_options->message_before, ENT_QUOTES);
 		$mlw_message_before = str_replace( "%QUIZ_NAME%" , $mlw_quiz_options->quiz_name, $mlw_message_before);
 		$mlw_message_before = str_replace( "%CURRENT_DATE%" , date("F jS Y"), $mlw_message_before);
-		$mlw_display .= "<span class='mlw_qmn_message_before'>".$mlw_message_before."</span><br />";
-		$mlw_display .= "<span name='mlw_error_message' id='mlw_error_message' style='color: red;'></span><br />";
+		$mlw_display .= "<span class='mlw_qmn_message_before'>".$mlw_message_before."</span>";
+		$mlw_display .= "<span name='mlw_error_message' id='mlw_error_message'></span>";
 
 		if ($mlw_quiz_options->contact_info_location == 0)
 		{
@@ -760,7 +760,7 @@ function mlw_quiz_shortcode($atts)
 		$mlw_display .= "<input type='hidden' name='total_questions' id='total_questions' value='".$mlw_qmn_total_questions."'/>";
 		$mlw_display .= "<input type='hidden' name='timer' id='timer' value='0'/>";
 		$mlw_display .= "<input type='hidden' name='complete_quiz' value='confirmation' />";
-		$mlw_display .= "<span name='mlw_error_message_bottom' id='mlw_error_message_bottom' style='color: red;'></span><br />";
+		$mlw_display .= "<span name='mlw_error_message_bottom' id='mlw_error_message_bottom'></span><br />";
 		$mlw_display .= "<input type='submit' value='".esc_attr(htmlspecialchars_decode($mlw_quiz_options->submit_button_text, ENT_QUOTES))."' />";
 		$mlw_display .= "</form>";
 		$mlw_display .= "</div>";
@@ -1407,9 +1407,9 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		$current_user = wp_get_current_user();
 		if ($mlw_quiz_options->user_name != 2)
 		{
-			$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter group name' />";
-			$mlw_contact_display .= "<br /><br />";
+			//$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter your group name' />";
+			
 
 		}
 		if ($mlw_quiz_options->user_comp != 2)
@@ -1443,8 +1443,8 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			$mlw_contact_display .= "<p style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Enter group name' />";
-			$mlw_contact_display .= "<br /><br />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Enter your group name' />";
+			//$mlw_contact_display .= "<br /><br />";
 		}
 		if ($mlw_quiz_options->user_comp != 2)
 		{

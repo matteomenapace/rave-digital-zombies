@@ -139,14 +139,12 @@ Template Name: Home with Quiz
                 <div class="modal-content  welcome-modal">
             <h1>Welcome</h1>
             <div class="modal-body">
-                <p>Please enter the code you were given below to get started.</p>
 
                 <form id="welcome-form" class="form-inline form-welcome" role="form">
                     <div class="form-group">
                         <div class="input-group">
-                            <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span>
-                            </div>
-                            <input id="welcome-input" class="form-control" type="text" placeholder="Enter the code">
+                            <p>Type in the</p>
+                            <input id="welcome-input" type="text" placeholder="password" autofocus>
                         </div>
                     </div>
 

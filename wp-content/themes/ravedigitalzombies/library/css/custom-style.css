@@ -56,8 +56,11 @@ body {
 }
 .quiz_begin {
     padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
+padding-right: 10px;
+text-align: center;
+background-color: #749ba0;
+margin: -10px;
+margin-bottom: 10px;
 }
 .title p {
     position: absolute;
@@ -196,27 +199,36 @@ letter-spacing: 3px;
 }
 .quiz_begin input[type="text"] {
     border: 0;
-    color: #fff;
-    background-color: #749ba0;
-    font-size: 20px;
-    padding: 15px 30px;
-    width: 100%;
-    margin: 0;
+color: #fff;
+background-color: #749ba0;
+font-size: 2em;
+padding: 15px 30px;
+width: 100%;
+margin: 0;
+text-align: center;
 }
-::-webkit-input-placeholder {
+
+
+.quiz_begin ::-webkit-input-placeholder {
     color: #fff;
+    opacity: 0.4;
 }
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: #fff;
-}
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #fff;
-}
-:-ms-input-placeholder {
+.quiz_begin :-moz-placeholder {
     color: #fff;
 }
+.quiz_begin ::-moz-placeholder {
+    color: #fff;
+}
+.quiz_begin :-ms-input-placeholder {
+    color: #fff;
+}
+
+
+
+
+
+/* WELCOME MODAL */
+
 .welcome-modal h1 {
     position: relative;
     float: left;
@@ -229,11 +241,46 @@ letter-spacing: 3px;
     margin: 0;
 }
 .welcome-modal p {
-    color: #749ba0 !important;
+    /*color: #749ba0 !important;*/
+    color: #000;
     display: inline-block;
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 24px;
     }
+
+#welcome-input{
+    border: 0;
+    /*border-bottom: 1px dotted #749ba0;*/
+    color: #749ba0;
+    font-size: 24px;
+    margin-left: 6px;
+    width: 105px;
+}  
+
+
+.welcome-modal ::-webkit-input-placeholder {
+    color: #749ba0;
+    opacity: 0.4;
+    border-bottom: 1px dotted #749ba0;
+}
+.welcome-modal :-moz-placeholder {
+    /* Firefox 18- */
+    color: #749ba0;
+    opacity: 0.4;
+    border-bottom: 1px dotted #749ba0;
+}
+.welcome-modal ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #749ba0;
+    opacity: 0.4;
+    border-bottom: 1px dotted #749ba0;
+}
+.welcome-modal :-ms-input-placeholder {
+    color: #749ba0;
+    opacity: 0.4;
+    border-bottom: 1px dotted #749ba0;
+}
+
 
 
 .welcome-modal-btn{
@@ -297,3 +344,19 @@ input[type="radio"]:checked + label:before {
   color: #749ba0;
   content: "\2713";
 }
+
+input:focus{
+    outline: 0;
+}
+
+#mlw_error_message{
+    position: relative;
+    top: 10px;
+}
+
+#mlw_error_message_bottom{
+    color:#5b8186;
+}
+
+
+
