@@ -5140,13 +5140,22 @@ button.close {
     border-radius: 0;
     border: 0;
     width: 100%;
-    background: #AA9C8F;
     height: 60px;
-    color: #fff;
+      line-height: 3;
+text-transform: uppercase;
+cursor: pointer;
+position: relative;
+background: #749ba0;
+color: #fff;
+padding: 0 1em 0 0;
+font-size: 18px;
+font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+font-weight: bold;
+letter-spacing: 3px;
 }
 
 .modal-footer button:hover{
-    background: #AA9C8F ;
+    background: #5b8186 ;
     color: #fff;
 }
 
