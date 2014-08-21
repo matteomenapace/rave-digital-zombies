@@ -1658,8 +1658,9 @@ legend {
 }
 label {
     display: inline-block;
-    margin-bottom: 5px;
-    font-weight: bold;
+margin-bottom: 5px;
+font-weight: 500;
+font-size: 1.3em;
 }
 input[type="search"] {
     -webkit-box-sizing: border-box;
@@ -5111,7 +5112,7 @@ button.close {
 }
 .modal-body {
     padding: 20px;
-    color: #AA9C8F;
+    color: #749ba0;
 }
 .modal-header img{
     text-align: center;
