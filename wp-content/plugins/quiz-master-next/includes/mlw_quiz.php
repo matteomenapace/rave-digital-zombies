@@ -478,8 +478,9 @@ function mlw_quiz_shortcode($atts)
 					$mlw_question->question_image = $mlw_question->hints;
 				}
 
-                $mlw_display .= "<div class='image-gradient-thumb'>";
-				$mlw_display .= "<img src='" . $mlw_question->question_image  . "'>";
+                $mlw_display .= "<div class='image-gradient'>";			
+                $mlw_display .= "</div>";
+				$mlw_display .= "<div class='modal-header' style='background-image:url(".$mlw_question->question_image.");'>";
                 $mlw_display .= "</div>";
 
 			$mlw_display .= "</div>"; // end .title
