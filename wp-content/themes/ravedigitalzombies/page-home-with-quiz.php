@@ -139,10 +139,9 @@ Template Name: Home with Quiz
 
 <div class="modal fade animated" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg">
-                <div class="modal-content  welcome-modal">
+        <div class="modal-content welcome-modal">
             <h1>Welcome</h1>
             <div class="modal-body">
-
                 <form id="welcome-form" class="form-inline form-welcome" role="form">
                     <div class="form-group">
                         <div class="input-group">
@@ -150,7 +149,7 @@ Template Name: Home with Quiz
                             <input id="welcome-input" type="text" placeholder="password" autofocus>
                         </div>
                     </div>
-
+                </form>
             </div>
             <div class="modal-footer">
                 <button id="welcome-submit-btn" type="button" class="btn btn-primary">Enter site</button>
