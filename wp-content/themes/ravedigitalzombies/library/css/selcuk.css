@@ -10,4 +10,10 @@
     .twitter-gradient {
         display: none;
     }
+    .welcome-modal h1 {
+        font-size: 60px;
+    }
+    .form-welcome {
+        margin: 50px 0;
+    }
 }
