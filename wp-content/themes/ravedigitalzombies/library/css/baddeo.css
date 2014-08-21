@@ -74,6 +74,8 @@ html, body
 	-ms-transition: background 0.3s;
 	-o-transition: background 0.3s;
 	transition: background 0.3s;
+
+	cursor: pointer;
 }
 
 .sidebar li.dropdown a:hover
