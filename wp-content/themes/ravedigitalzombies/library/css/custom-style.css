@@ -231,12 +231,10 @@ letter-spacing: 3px;
 .welcome-modal p {
     color: #749ba0 !important;
     display: inline-block;
-<<<<<<< HEAD
-}
-=======
+    padding-top: 30px;
     font-size: 18px;
-    margin: 1em 0;
-}
+    }
+
 
 .welcome-modal-btn{
     line-height: 3;
@@ -299,5 +297,3 @@ input[type="radio"]:checked + label:before {
   color: #749ba0;
   content: "\2713";
 }
-
->>>>>>> 363d4f103f595746dd628fd8e60be4038ff5e60f
