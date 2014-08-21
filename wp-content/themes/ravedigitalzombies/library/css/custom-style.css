@@ -47,9 +47,7 @@ body {
     -0-transition: all .3s ease;
     transition: all .3s ease;
 }
-
-#main
-{
+#main {
     padding: 0 20px;
 }
 #main article img {
@@ -57,7 +55,8 @@ body {
     max-height: 240px;
 }
 .quiz_begin {
-    padding-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
 }
 .title p {
@@ -77,7 +76,7 @@ body {
     opacity: 0.6;
 }
 .image-gradient-thumb {
-       z-index: 1000;
+    z-index: 1000;
     /*width: 100%;*/
     height: 240px;
     opacity: 0.4;
@@ -94,7 +93,6 @@ body {
     background-image: -webkit-linear-gradient(top, #5C5C5C 0%, #000000 100%);
     /* W3C Markup, IE10 Release Preview */
     background-image: linear-gradient(to bottom, #5C5C5C 0%, #000000 100%);
-    
     bottom: 0;
     left: 10px;
     right: 10px;
@@ -118,8 +116,6 @@ body {
     background-image: -webkit-linear-gradient(top, #5C5C5C 0%, #000000 100%);
     /* W3C Markup, IE10 Release Preview */
     background-image: linear-gradient(to bottom, #5C5C5C 0%, #000000 100%);
-    
-
 }
 .form-welcome {
     margin: 30px 20px 15px;
@@ -184,14 +180,29 @@ h4.modal-title {
     text-align: center;
 }
 .quiz_begin input[type="text"] {
-    display: inline-block;
-    border: solid 1px;
-    color: #AA9C8F;
+    border: 0;
+    color: #fff;
+    background-color: #749ba0;
     font-size: 20px;
-    padding: 15px;
-    margin-left: 20px;
+    padding: 15px 30px;
+    width: 100%;
+    margin: 0;
 }
-.welcome-modal h1{
+::-webkit-input-placeholder {
+    color: #fff;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+:-ms-input-placeholder {
+    color: #fff;
+}
+.welcome-modal h1 {
     position: relative;
     float: left;
     background: #333333;
@@ -201,10 +212,7 @@ h4.modal-title {
     line-height: 1em;
     letter-spacing: -2px;
 }
-
-.welcome-modal p{
+.welcome-modal p {
     color: #749ba0 !important;
     display: inline-block;
 }
-
-
