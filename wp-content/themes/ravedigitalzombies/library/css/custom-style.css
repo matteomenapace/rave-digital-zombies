@@ -239,9 +239,9 @@ text-align: center;
     /*color: #749ba0 !important;*/
     color: #000;
     display: inline-block;
-<<<<<<< HEAD
     padding-top: 30px;
     font-size: 24px;
+    text-align: center;
     }
 
 #welcome-input{
@@ -288,7 +288,6 @@ text-align: center;
     width: 100%;
 }
 .welcome-modal-btn {
-
     line-height: 3;
     text-transform: uppercase;
     cursor: pointer;
@@ -341,7 +340,6 @@ input[type="radio"] + label:before {
     border-radius: 50%;
 }
 input[type="radio"]:checked + label:before {
-<<<<<<< HEAD
   background: #fff;
   color: #749ba0;
   content: "\2713";
@@ -383,3 +381,37 @@ input:focus{
     /* IE6-9 */
 }
 
+.results_score h1{
+    position: relative;
+    float: left;
+    background: #333333;
+    color: #ffffff;
+    padding: 0 30px 10px 30px;
+    font-size: 80px;
+    letter-spacing: -2px;
+    margin: 0;
+    display: block;
+}
+
+.results_container{
+    text-align: center;
+    padding: 25px;
+}
+
+.results_question{
+    color: #749ba0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.results_answer_pro{
+    color: #749ba0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.results_answer_correct{
+    color: #749ba0;
+    display: inline-block;
+    font-weight: bold;
+}
