@@ -760,10 +760,11 @@ function mlw_quiz_shortcode($atts)
 		$mlw_display .= "<input type='hidden' name='total_questions' id='total_questions' value='".$mlw_qmn_total_questions."'/>";
 		$mlw_display .= "<input type='hidden' name='timer' id='timer' value='0'/>";
 		$mlw_display .= "<input type='hidden' name='complete_quiz' value='confirmation' />";
-		$mlw_display .= "<input type='submit' value='".esc_attr(htmlspecialchars_decode($mlw_quiz_options->submit_button_text, ENT_QUOTES))."' />";
 		$mlw_display .= "<span name='mlw_error_message_bottom' id='mlw_error_message_bottom' style='color: red;'></span><br />";
+		$mlw_display .= "<input type='submit' value='".esc_attr(htmlspecialchars_decode($mlw_quiz_options->submit_button_text, ENT_QUOTES))."' />";
 		$mlw_display .= "</form>";
 		$mlw_display .= "</div>";
+
 		$mlw_display .= "</div>";
 		
 	}

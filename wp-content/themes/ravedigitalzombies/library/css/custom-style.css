@@ -166,13 +166,23 @@ h4.modal-title {
     background-color: #5b8186;
 }
 .quiz_section input[type="submit"] {
-    font-size: 1.4em;
+    font-size: 18px;
     width: 100%;
     border: 0;
     color: #fff;
-    background-color: #AA9C8F;
     height: 60px;
     margin-top: 10px;
+    line-height: 3;
+text-transform: uppercase;
+cursor: pointer;
+position: relative;
+background: #749ba0;
+color: #fff;
+padding: 0 1em 0 0;
+
+font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+font-weight: bold;
+letter-spacing: 3px;
 }
 .quiz_end {
     margin: 0;
