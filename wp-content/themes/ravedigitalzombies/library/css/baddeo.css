@@ -64,3 +64,42 @@ html, body
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 14px;
 }
+
+/* SIDEBAR */
+
+.sidebar a
+{
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	-ms-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
+}
+
+.sidebar li.dropdown a:hover
+{
+	color: #ffffff;
+	background: #333333;
+	/*font-weight: bold;*/
+}	
+
+.sidebar ul.dropdown-menu
+{
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+.sidebar ul.dropdown-menu li a
+{
+	background: #000000;
+	color: #ffffff;
+	padding: 10px 15px;
+}
+
+.sidebar ul.dropdown-menu li a:hover
+{
+	background: #333333;
+}
+
