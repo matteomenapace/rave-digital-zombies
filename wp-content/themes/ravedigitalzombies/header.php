@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/animate.css">
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/style.css">
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/custom-style.css">
+		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/baddeo.css">
         
 
 		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
@@ -47,4 +48,4 @@
 		
 		</header> <!-- end header -->
 		
-		<div class="container col-sm-9">
+		<div class="container">
