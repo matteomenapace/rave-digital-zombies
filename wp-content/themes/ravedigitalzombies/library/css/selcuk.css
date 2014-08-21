@@ -1,0 +1,19 @@
+/*responsive stuff*/
+
+@media (max-width: 768px) {
+    .image-gradient-thumb {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .twitter-gradient {
+        display: none;
+    }
+    .welcome-modal h1 {
+        font-size: 60px;
+    }
+    .form-welcome {
+        margin: 50px 0;
+    }
+}
