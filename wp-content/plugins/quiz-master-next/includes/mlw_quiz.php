@@ -684,7 +684,7 @@ function mlw_quiz_shortcode($atts)
 			}
 			else
 			{
-				$mlw_display .= "<input type='text' class='mlw_answer_open_text' name='question".$mlw_question->question_id."' />";
+				$mlw_display .= "<input type='text' class='mlw_answer_open_text' name='question".$mlw_question->question_id."' placeholder='Enter your answer'/>";
 				$mlw_display .= "<br />";				
 			}
 			if ($mlw_question->comments == 0)
@@ -848,7 +848,7 @@ function mlw_quiz_shortcode($atts)
 					}
 					else
 					{
-						$mlw_user_answer = " ";
+						$mlw_user_answer = "";
 					}						
 					$mlw_qmn_question_answers_array = $mlw_qmn_loaded_answer_arrays[$mlw_question->question_id];
 					foreach($mlw_qmn_question_answers_array as $mlw_qmn_question_answers_each)
@@ -876,7 +876,7 @@ function mlw_quiz_shortcode($atts)
 					}
 					else
 					{
-						$mlw_user_answer = " ";
+						$mlw_user_answer = "";
 					}
 					$mlw_user_text .= strval(stripslashes(htmlspecialchars_decode($mlw_user_answer, ENT_QUOTES)));
 					$mlw_qmn_question_answers_array = $mlw_qmn_loaded_answer_arrays[$mlw_question->question_id];
@@ -903,7 +903,7 @@ function mlw_quiz_shortcode($atts)
 						    if (isset($_POST["question".$mlw_question->question_id."_".$i]) && htmlspecialchars(stripslashes($_POST["question".$mlw_question->question_id."_".$i]), ENT_QUOTES) == esc_attr($mlw_qmn_question_answers_each[0]))
 						    {
 						    	$mlw_points += $mlw_qmn_question_answers_each[1];
-								$mlw_user_text .= strval(htmlspecialchars_decode($mlw_qmn_question_answers_each[0], ENT_QUOTES)).".";
+								$mlw_user_text .= strval(htmlspecialchars_decode($mlw_qmn_question_answers_each[0], ENT_QUOTES)).". ";
 								if ($mlw_qmn_question_answers_each[2] == 1)
 								{
 									$mlw_qmn_user_correct_answers += 1;
@@ -916,7 +916,7 @@ function mlw_quiz_shortcode($atts)
 						}
 						if ($mlw_qmn_question_answers_each[2] == 1)
 						{
-							$mlw_correct_text .= htmlspecialchars_decode($mlw_qmn_question_answers_each[0], ENT_QUOTES).".";
+							$mlw_correct_text .= htmlspecialchars_decode($mlw_qmn_question_answers_each[0], ENT_QUOTES).". ";
 							$mlw_qmn_total_correct_answers++;
 						}
 					}
