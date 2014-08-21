@@ -189,3 +189,15 @@ h4.modal-title {
     padding: 15px;
     margin-left: 20px;
 }
+span h1 {
+    position: relative;
+    float: left;
+    background: #333333;
+    color: #ffffff;
+    padding: 10px 30px 10px 0;
+    font-size: 90px;
+    line-height: 1em;
+    letter-spacing: -2px;
+}
+
+
