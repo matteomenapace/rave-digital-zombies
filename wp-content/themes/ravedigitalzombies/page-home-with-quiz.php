@@ -7,96 +7,72 @@ Template Name: Home with Quiz
 <?php get_header(); ?>
 
 <div id="content" class="clearfix row">
-    <div id="main" class="col-sm-12 clearfix" role="main">
+
+    <div id="main" class="col-sm-9" role="main">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         
         <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-            <header>
-
-    <?php 
-        $post_thumbnail_id = get_post_thumbnail_id();
-        $featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
-    ?>
-            </header>
 						
-            <section class="row post_content">
+            <!-- <section class=" post_content"> --> <!-- row -->
 
-                <div class="col-sm-12 main-content">
-<!-- static content with style -->
-
-
-<!-- questions -->
-<div class="main-container col-sm-10 row">
-   
-            <?php the_content(); ?>
+                <!-- <div class="col-sm-12 main-content"> -->
 
 
+                    <!-- questions -->
+                    <div class="main-container"> <!-- col-sm-10  -->
+                       
+                        <?php the_content(); ?>
 
-
-</div>
-
-
-
+                    </div> 
                
-               
-               
-               
-               
-               
-<!-- static content end -->
-                </div>
+                <!-- </div> -->
 
-            </section> <!-- end article header -->
-						
-            <footer>
-            
-            </footer> <!-- end article footer -->
-					
+            <!-- </section>  -->
+											
         </article> <!-- end article -->
 					
-					<?php 
-						// No comments on homepage
-						//comments_template();
-					?>
+			<?php 
+				// No comments on homepage
+				//comments_template();
+			?>
 					
-					<?php endwhile; ?>	
+		<?php endwhile; ?>	
+		
+		<?php else : ?>
 					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
+			<article id="post-not-found">
+			    <header>
+			    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
+			    </header>
+			    <section class="post_content">
+			    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
+			    </section>
+			    <footer>
+			    </footer>
+			</article>
+			
+		<?php endif; ?>
 
     </div> <!-- end #main -->
 
-<div class="col-sm-3 sidebar">
+    <div class="col-sm-3 sidebar">
 
-    <a class="twitter-timeline" href="https://twitter.com/hashtag/ravedz" data-widget-id="502097294963904515" data-theme="light" data-link-color="#AA9C8F" data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="300">#ravedz Tweets</a>
-    <script>
-        ! function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + "://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, "script", "twitter-wjs");
-    </script>
-    
-    <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-</div>
-<!--/span-->
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/ravedz" data-widget-id="502097294963904515" data-theme="light" data-link-color="#AA9C8F" data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="300">#ravedz Tweets</a>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
+        
+        <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+    </div>
 
 </div> <!-- end #content -->
 
@@ -129,7 +105,7 @@ Template Name: Home with Quiz
             // don't refresh the page, or submit the form...
             event.preventDefault();
             
-//            alert('you clicked me!');
+            // alert('you clicked me!');
                 
             // let's see what they typed in the input...
             var input = $("#welcome-input").val()
@@ -144,7 +120,7 @@ Template Name: Home with Quiz
             {
                 // no mate, try again
                 // TODO shake the password input
-//                alert('no mate, try again');
+               // alert('no mate, try again');
                 var animationType = 'wobble'//'shake';
                 $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                     $modal.removeClass(animationType)
