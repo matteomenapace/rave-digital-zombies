@@ -55,8 +55,9 @@ Template Name: Home with Quiz
 
     </div> <!-- end #main -->
 
-    <div class="col-sm-3 sidebar">
+    <div class="col-sm-3 sidebar twitter-gradient">
 
+        <!-- twitter start -->
         <a class="twitter-timeline" href="https://twitter.com/hashtag/ravedz" data-widget-id="502097294963904515" data-theme="light" data-link-color="#AA9C8F" data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="300">#ravedz Tweets</a>
         <script>
             ! function (d, s, id) {
@@ -70,7 +71,9 @@ Template Name: Home with Quiz
                 }
             }(document, "script", "twitter-wjs");
         </script>
-        
+        <!-- twitter end -->
+        </div>
+    <div class="col-sm-3 sidebar">
         <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
     </div>
 
