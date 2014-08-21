@@ -189,7 +189,7 @@ h4.modal-title {
     padding: 15px;
     margin-left: 20px;
 }
-span h1 {
+.welcome-modal h1{
     position: relative;
     float: left;
     background: #333333;
@@ -198,6 +198,11 @@ span h1 {
     font-size: 90px;
     line-height: 1em;
     letter-spacing: -2px;
+}
+
+.welcome-modal p{
+    color: #749ba0 !important;
+    display: inline-block;
 }
 
 

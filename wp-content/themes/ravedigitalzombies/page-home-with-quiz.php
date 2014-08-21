@@ -136,9 +136,9 @@ Template Name: Home with Quiz
 
 <div class="modal fade animated" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content  welcome-modal">
+            <h1>Welcome</h1>
             <div class="modal-body">
-                <h1>Welcome</h1>
                 <p>Please enter the code you were given below to get started.</p>
 
                 <form id="welcome-form" class="form-inline form-welcome" role="form">
