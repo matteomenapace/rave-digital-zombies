@@ -1174,7 +1174,7 @@ function mlw_generate_quiz_options()
 					width:550px;" value="<?php echo esc_attr(htmlspecialchars_decode($mlw_question_info->question_answer_info, ENT_QUOTES)); ?>"/></td>
 				</tr>
 				<tr valign="top">
-				<td><span style='font-weight:bold;'>Hint</span></td>
+				<td><span style='font-weight:bold;'>Image link</span></td>
 				<td colspan="3">
 				<input type="text" name="edit_hint" id="edit_hint" style="border-color:#000000;
 					color:#3300CC; 

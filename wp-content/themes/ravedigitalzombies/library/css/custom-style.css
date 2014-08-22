@@ -159,7 +159,7 @@ h4.modal-title {
 }
 .modal-body h1,
 .modal-body p {
-    text-align: center;
+    /*text-align: center;*/
 }
 .mlw_answer_open_text{
     padding: 10px 15px;
@@ -376,18 +376,6 @@ input:focus {
     /* W3C */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e8e8e8', GradientType=0);
     /* IE6-9 */
-}
-.results_score h1{
-    position: relative;
-    float: left;
-    background: #333333;
-    color: #ffffff;
-    padding: 0 30px 10px 30px;
-    font-size: 80px;
-    letter-spacing: -2px;
-    margin: 0;
-    display: block;
-    margin-bottom: 50px;
 }
 .results_container{
     padding: 15px;

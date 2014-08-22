@@ -1,6 +1,41 @@
+.badge {
+    background-color: #749ba0;
+}
+/* sidebar */
+
+.sidebar {
+    background: transparent;
+}
+.sidebar .twitter-gradient {
+    height: 600px;
+}
+.sidebar .twitter-gradient iframe {
+    height: 600px !important;
+    width: 100% !important;
+}
+.sidebar ul.nav {
+    background: white;
+    margin-bottom: 20px;
+}
+.nav li:first-child {
+    background-color: #333;
+}
+.nav li.active a {
+    color: #fff;
+}
+.nav li.active a:hover {
+    background-color: #000
+}
+.quiz_end {
+    margin: -40px -20px -20px -20px;
+}
 /*responsive stuff*/
 
 @media (max-width: 768px) {
+    body:before {
+        background: none;
+        background-color: #333;
+    }
     .image-gradient-thumb {
         bottom: 0;
         left: 0;
@@ -15,5 +50,36 @@
     }
     .form-welcome {
         margin: 50px 0;
+    }
+    a.logo {
+        top: 0;
+        margin: 0;
+        position: absolute;
+        display: inline-block;
+        z-index: 100;
+        background-size: 75px !important;
+        background-position: center;
+        width: 100%;
+        left: 0;
+    }
+    /*nav*/
+    .sidebar ul.nav {
+        margin-top: -20px;
+    }
+    .nav li {
+        padding: 0 10px;
+    }
+    .main-container {
+        margin: 20px 0 0;
+    }
+    #main {
+        padding: 0;
+        margin-top: 30px;
+    }
+    .box .title {
+        margin-bottom: -10px;
+    }
+    .quiz_begin {
+        margin-bottom: -10px;
     }
 }
