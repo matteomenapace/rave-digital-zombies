@@ -55,27 +55,37 @@ Template Name: Home with Quiz
 
     </div> <!-- end #main -->
 
-    <div class="col-sm-3 sidebar twitter-gradient">
+    <div class="col-sm-3 sidebar ">
+        <div class="twitter-gradient">
+            <!-- twitter start -->
+        
+                <a class="twitter-timeline" href="https://twitter.com/hashtag/ravedz" data-widget-id="502097294963904515" data-theme="light" data-link-color="#AA9C8F" data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="300">#ravedz</a>
+                <script>
+                    ! function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + "://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                </script>
+        
 
-        <!-- twitter start -->
-        <a class="twitter-timeline" href="https://twitter.com/hashtag/ravedz" data-widget-id="502097294963904515" data-theme="light" data-link-color="#AA9C8F" data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="300">#ravedz Tweets</a>
-        <script>
-            ! function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + "://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        </script>
+<!--
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/hello" data-widget-id="502764290206494720">#hello Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+-->
+
+       
+       
         <!-- twitter end -->
         </div>
-    <div class="col-sm-3 sidebar">
+
         <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-    </div>
+    </div>        
 
 </div> <!-- end #content -->
 
@@ -88,6 +98,13 @@ Template Name: Home with Quiz
     // disable until development is finished  
     jQuery(document).ready(function($)
 	{
+        // Every time a modal is shown, if it has an autofocus element, focus on it.
+        $('.modal').on('shown.bs.modal', function() 
+        {
+            $(this).find('[autofocus]').focus();
+        });
+        
+        
         var $modal = $('#welcome');
         
         // launch the modal
@@ -118,6 +135,10 @@ Template Name: Home with Quiz
                 // hey little hacker, you found the password :)
                 // cool, you're in
                 $modal.modal('hide');
+                
+                /*focus on group input field when modal is hidden*/
+                $("#mlwUserName").focus(); 
+                
             }
             else
             {
@@ -137,7 +158,7 @@ Template Name: Home with Quiz
 
 
 
-<div class="modal fade animated" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade animated" id="welcome" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg">
         <div class="modal-content welcome-modal">
             <h1>Welcome</h1>

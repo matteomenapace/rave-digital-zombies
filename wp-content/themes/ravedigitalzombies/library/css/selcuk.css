@@ -1,3 +1,27 @@
+/* sidebar */
+
+.sidebar
+{
+    background: transparent;
+}
+
+.sidebar .twitter-gradient
+{
+    height: 600px;
+}
+
+.sidebar .twitter-gradient iframe
+{
+    height: 600px !important;
+    width: 100% !important;
+}
+
+.sidebar ul.nav
+{
+    background: white;
+    margin-bottom: 20px;
+}
+
 /*responsive stuff*/
 
 @media (max-width: 768px) {
