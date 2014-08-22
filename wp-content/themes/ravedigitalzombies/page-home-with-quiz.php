@@ -92,19 +92,32 @@ Template Name: Home with Quiz
 
 <?php if(empty($_POST)) : ?>
 
-<!-- loads welcome modal on page load -->
 <script type="text/javascript">
 
-    // disable until development is finished  
     jQuery(document).ready(function($)
 	{
-        // Every time a modal is shown, if it has an autofocus element, focus on it.
+        // every time a modal is shown, if it has an autofocus element, focus on it
         $('.modal').on('shown.bs.modal', function() 
         {
             $(this).find('[autofocus]').focus();
-        });
+        })
+
+        // listen to radio inputs, text inputs and options
+        // when they get changed (someone clicks on them or enter text)
+        // fade the question's box out a bit
+        $('.modal input:radio, .modal input:checkbox, .modal input:text').change(function()
+        {
+            var $input = $(this),
+                $slide = $input.parent().parent().parent().parent().parent()
+
+            console.log($input)
+            console.log($slide)
+
+            $slide.addClass('done') 
+        })
         
         
+        // loads welcome modal on page load
         var $modal = $('#welcome');
         
         // launch the modal

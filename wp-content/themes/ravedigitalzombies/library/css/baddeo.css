@@ -38,7 +38,28 @@ body:before
 	padding-top: 30px;
 }
 
+/* QUIZ */
 
+/*.quiz_section,*/
+.quiz_section .title,
+.quiz_section .image-gradient-thumb
+{
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	-ms-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+} 
+
+.quiz_section.done .title
+{
+	opacity: 0.4;
+}
+
+.quiz_section.done .image-gradient-thumb
+{
+	background: #749ba0;
+}
 
 /* LOGO */
 
