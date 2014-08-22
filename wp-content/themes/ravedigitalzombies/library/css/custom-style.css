@@ -159,7 +159,7 @@ h4.modal-title {
 }
 .modal-body h1,
 .modal-body p {
-    text-align: center;
+    /*text-align: center;*/
 }
 .mlw_answer_open_text{
     padding: 10px 15px;
