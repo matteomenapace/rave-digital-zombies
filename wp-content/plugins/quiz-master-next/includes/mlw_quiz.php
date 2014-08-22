@@ -697,11 +697,11 @@ function mlw_quiz_shortcode($atts)
 				$mlw_display .= "<textarea cols='70' rows='5' class='mlw_qmn_question_comment' id='mlwComment".$mlw_question->question_id."' name='mlwComment".$mlw_question->question_id."' onclick='clear_field(this)'>".htmlspecialchars_decode($mlw_quiz_options->comment_field_text, ENT_QUOTES)."</textarea>";
 				$mlw_display .= "<br />";
 			}
-			if ($mlw_question->hints != "")
+			/*if ($mlw_question->hints != "")
 			{
 				$mlw_display .= "<span title=\"".htmlspecialchars_decode($mlw_question->hints, ENT_QUOTES)."\" style=\"text-decoration:underline;color:rgb(0,0,255);\" class='mlw_qmn_hint_link'>Hint</span>";
 				$mlw_display .= "<br /><br />";
-			}
+			}*/
 
 
 						$mlw_display .= "</div>"; // end modal-body
