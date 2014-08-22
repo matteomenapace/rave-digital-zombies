@@ -167,7 +167,7 @@ Template Name: Home with Quiz
                     <div class="form-group">
                         <div class="input-group">
                             <p>Type in the</p>
-                            <input id="welcome-input" type="text" placeholder="password" autofocus>
+                            <input id="welcome-input" type="text" placeholder="password" autofocus autocomplete="off">
                         </div>
                     </div>
                 </form>
