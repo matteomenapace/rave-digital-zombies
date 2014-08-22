@@ -1408,7 +1408,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			//$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter your group name' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter your group name' autocomplete='off' />";
 			
 
 		}
