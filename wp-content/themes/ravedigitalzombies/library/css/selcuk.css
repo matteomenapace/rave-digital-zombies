@@ -59,4 +59,17 @@
         position: absolute;
         
     }
+    
+    /*nav*/
+    .nav li {
+        padding: 0 10px;
+    }
+.main-container {
+    margin: 0;
+}
+    #main {
+    padding: 0;
+    
+    }
+    
 }
