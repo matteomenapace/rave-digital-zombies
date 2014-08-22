@@ -17,7 +17,8 @@ Template Name: Home with Quiz
 
                 <!-- <div class="col-sm-12 main-content"> -->
 
-
+                <!-- navicon to scroll down to menu on mobile  <div id="navicon"></div>-->
+                   
                     <!-- questions -->
                     <div class="main-container"> <!-- col-sm-10  -->
                        
