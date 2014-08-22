@@ -400,3 +400,16 @@ input:focus {
     display: inline-block;
     font-weight: bold;
 }
+body:before
+{
+    /*display: block;*/
+    content: " ";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*background-image: url('http://induction.baddeo.com/wp-content/uploads/waves.jpg');*/
+    background-image: url('http://i.imgur.com/CeT4gQf.jpg');
+    background-position: left bottom;
+}
