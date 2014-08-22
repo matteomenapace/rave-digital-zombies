@@ -20,14 +20,41 @@
 .nav li:first-child {
     background-color: #333;
 }
-.nav li.active a {
+.nav li:first-child a {
     color: #fff;
 }
-.nav li.active a:hover {
+.nav li:first-child a:hover {
     background-color: #000
 }
 .quiz_end {
     margin: -40px -20px -20px -20px;
+}
+header p {
+    font-size: 1.4em;
+    display: inline-block;
+}
+.green-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    background: #749ba0;
+    letter-spacing: 3px;
+    padding: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    height: 60px;
+    margin-top: 10px;
+    line-height: 3;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+.green-button:hover,
+.green-button:focus,
+.green-button:active {
+    background-color: #5b8186;
 }
 /*responsive stuff*/
 
@@ -81,5 +108,9 @@
     }
     .quiz_begin {
         margin-bottom: -10px;
+    }
+    .page-title h1,
+    h1.page-title {
+        font-size: 60px;
     }
 }
