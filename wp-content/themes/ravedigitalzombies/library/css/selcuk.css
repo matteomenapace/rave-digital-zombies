@@ -66,7 +66,7 @@ header p {
     background-color: #5b8186;
 }
 #mlw_error_message_bottom {
-    display: inherit;
+    display: block;
     text-align: center;
 }
 /*responsive stuff*/
@@ -79,7 +79,7 @@ header p {
     .container {
         margin: 0 10px;
     }
-    .content {} .image-gradient-thumb {
+    .image-gradient-thumb {
         bottom: 0;
         left: 0;
         right: 0;
@@ -90,6 +90,11 @@ header p {
     }
     .welcome-modal h1 {
         font-size: 60px;
+    }
+    #welcome-input {
+        width: 50%;
+        padding: 0;
+        -webkit-appearance: none;
     }
     .form-welcome {
         margin: 70px 0 0;
