@@ -16,6 +16,8 @@ Template Name: Home with Quiz
             <!-- <section class=" post_content"> --> <!-- row -->
 
                 <!-- <div class="col-sm-12 main-content"> -->
+
+    <a href="#menu"><button class="navicon"><i class="fa fa-bars fa-lg"></i></button></a>
                    
                     <!-- questions -->
                     <div class="main-container"> <!-- col-sm-10  -->
@@ -50,7 +52,7 @@ Template Name: Home with Quiz
 
     </div> <!-- end #main -->
 
-    <div class="col-sm-3 sidebar ">
+    <div id="menu" class="col-sm-3 sidebar">
         <div class="twitter-gradient">
             <!-- twitter start -->
         

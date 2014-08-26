@@ -1,6 +1,9 @@
 .badge {
     background-color: #749ba0;
 }
+.navicon {
+    display: none;
+}
 /* sidebar */
 
 .sidebar {
@@ -22,7 +25,6 @@
 }
 .nav li:first-child a {
     color: #fff;
-    font-weight: bolder;
 }
 .nav li:first-child a:hover {
     background-color: #000
@@ -66,7 +68,7 @@ header p {
     background-color: #5b8186;
 }
 #mlw_error_message_bottom {
-    display: inherit;
+    display: block;
     text-align: center;
 }
 /*responsive stuff*/
@@ -76,10 +78,19 @@ header p {
         background: none;
         background-color: #333;
     }
+    .navicon {
+        display: block;
+        color: #fff;
+        background-color: #5b8186;
+        padding: 10px;
+        border: 0;
+        width: 100%;
+        margin: 20px 0 0;
+    }
     .container {
         margin: 0 10px;
     }
-    .content {} .image-gradient-thumb {
+    .image-gradient-thumb {
         bottom: 0;
         left: 0;
         right: 0;
@@ -90,6 +101,11 @@ header p {
     }
     .welcome-modal h1 {
         font-size: 60px;
+    }
+    #welcome-input {
+        width: 50%;
+        padding: 0;
+        -webkit-appearance: none;
     }
     .form-welcome {
         margin: 70px 0 0;
@@ -108,9 +124,6 @@ header p {
     /*nav*/
     .sidebar ul.nav {
         margin: -10px 0;
-    }
-    .main-container {
-        margin: 20px 0 0;
     }
     #main {
         padding: 0;

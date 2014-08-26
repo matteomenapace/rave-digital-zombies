@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/custom-style.css">
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/baddeo.css">
 		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/selcuk.css">
+		<link rel="stylesheet" href="<?php echo(WP_THEME_URL); ?>/library/css/font-awesome.css">
         
 
 		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
