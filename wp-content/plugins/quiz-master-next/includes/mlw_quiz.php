@@ -363,8 +363,8 @@ function mlw_quiz_shortcode($atts)
 				var x=document.forms['quizForm']['mlwUserName'].value;
 				if (x==null || x=='')
 				  {
-				  	  document.getElementById('mlw_error_message').innerHTML = 'Please enter your group name';
-				  	  document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your group name';
+				  	  document.getElementById('mlw_error_message').innerHTML = 'Please enter your name';
+				  	  document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your name';
 					  return false;
 				  }";
 		}
