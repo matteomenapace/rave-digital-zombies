@@ -345,7 +345,7 @@ function mlw_quiz_shortcode($atts)
 		$mlw_views += 1;
 		$update = "UPDATE " . $wpdb->prefix . "mlw_quizzes" . " SET quiz_views='".$mlw_views."' WHERE quiz_id=".$mlw_quiz_id;
 		$results = $wpdb->query( $update );
-		
+		 
 		//Form validation script
 		$mlw_display .= "
 		<script>
@@ -363,8 +363,13 @@ function mlw_quiz_shortcode($atts)
 				var x=document.forms['quizForm']['mlwUserName'].value;
 				if (x==null || x=='')
 				  {
-				  	  document.getElementById('mlw_error_message').innerHTML = 'Please enter your name';
-				  	  document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your name';
+				  	// launch the modal
+			            jQuery('#error-modal').modal(
+			            {
+			                
+			            });
+				  	  //document.getElementById('mlw_error_message').innerHTML = 'Please enter your name';
+				  	  //document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your name';
 					  return false;
 				  }";
 		}

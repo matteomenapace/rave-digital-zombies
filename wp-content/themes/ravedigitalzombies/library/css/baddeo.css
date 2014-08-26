@@ -9,10 +9,9 @@ body:before
 	right: 0;
 
 	/*background-image: url('http://induction.baddeo.com/wp-content/uploads/waves.jpg');*/
-	background-image: url('http://induction.baddeo.com/wp-content/uploads/cables-pale.jpg');
-	background-image: url('http://induction.baddeo.com/wp-content/uploads/cables.jpg');
-	background-image: url('http://induction.baddeo.com/wp-content/uploads/neurons.jpg');
+
 	background-image: url('http://www.ravensbourne.ac.uk/media/44612/jb0056_Background.jpg');
+	background-image: url('../../images/background_zombie.jpg');
 
 	background-position: left bottom;
 	background-size: cover; 
