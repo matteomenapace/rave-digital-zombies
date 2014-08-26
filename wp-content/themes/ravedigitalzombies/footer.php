@@ -26,6 +26,7 @@
 		</div> <!-- end #container -->
 
 		<a href="http://www.ravensbourne.ac.uk/" class="logo">Ravensbourne</a>
+		<a href="http://www.ravensbourne.ac.uk/" class="logo-brain">Ravensbourne</a>
 				
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

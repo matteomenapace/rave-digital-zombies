@@ -71,6 +71,21 @@ header p {
     display: block;
     text-align: center;
 }
+a.logo-brain
+{
+	position: fixed;
+	bottom: 20px !important;
+	left: 20px;
+	z-index: 999999;
+	width: 120px;
+	display: block;
+	background-image: url('../../images/logo-brain.png');
+	background-repeat: no-repeat;
+	background-size: 100% !important;
+	height: 80px;
+	text-indent: -9999px;
+    right: 0;
+}	
 /*responsive stuff*/
 
 @media (max-width: 768px) {
