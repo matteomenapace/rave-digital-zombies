@@ -363,8 +363,8 @@ function mlw_quiz_shortcode($atts)
 				var x=document.forms['quizForm']['mlwUserName'].value;
 				if (x==null || x=='')
 				  {
-				  	  document.getElementById('mlw_error_message').innerHTML = 'Please enter your group name';
-				  	  document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your group name';
+				  	  document.getElementById('mlw_error_message').innerHTML = 'Please enter your name';
+				  	  document.getElementById('mlw_error_message_bottom').innerHTML = 'Please enter your name';
 					  return false;
 				  }";
 		}
@@ -848,7 +848,7 @@ function mlw_quiz_shortcode($atts)
 						<div class='modal fade animated' id='survey' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>
     <div class='modal-dialog modal-lg'>
         <div class='modal-content welcome-modal'>
-            <h1 class='page-title'>Great!</h1>
+            <h1>Great!</h1>
             <div class='modal-body'>
                <p>You've completed the quiz! Now take this awesome survey to help us...</p>
             </div>
@@ -1435,7 +1435,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			//$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter your group name' autocomplete='off' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter your name' autocomplete='off' />";
 			
 
 		}
@@ -1470,7 +1470,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			$mlw_contact_display .= "<p style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Enter your group name' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Enter your name' />";
 			//$mlw_contact_display .= "<br /><br />";
 		}
 		if ($mlw_quiz_options->user_comp != 2)
