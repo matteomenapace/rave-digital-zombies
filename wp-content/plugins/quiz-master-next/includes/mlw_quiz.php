@@ -837,33 +837,6 @@ function mlw_quiz_shortcode($atts)
 		$results = $wpdb->query( $update );
 
 		//See which answers were correct and award points if necessary
-		$mlw_display .= "<script type='text/javascript'>
-						jQuery(document).ready(function($)
-							{
-						        $('#survey').modal(
-						        {
-						           
-						        });
-						        
-						        
-						    })
-						    
-						</script>
-
-						<div class='modal fade animated' id='survey' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>
-    <div class='modal-dialog modal-lg'>
-        <div class='modal-content welcome-modal'>
-            <h1>Great!</h1>
-            <div class='modal-body'>
-               <p>You've completed the quiz! Now take this awesome survey to help us...</p>
-            </div>
-            <div class='modal-footer'>
-                <a href='https://www.surveymonkey.com/s/D5TTYDK' target='_blank'><button id='survey-submit-btn' type='button' class='btn btn-primary'>Lets do it!</button></a>
-            </div>
-        </div>
-    </div>
-</div>";
-
 		$mlw_user_text = "";
 		$mlw_correct_text = "";
 		$mlw_qmn_answer_array = array();

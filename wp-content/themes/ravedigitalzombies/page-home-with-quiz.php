@@ -86,157 +86,190 @@ Template Name: Home with Quiz
 
 </div> <!-- end #content -->
 
-
+<!-- if there's no POST, then we're on the quiz page -->
 <?php if(empty($_POST)) : ?>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-    jQuery(document).ready(function($)
-	{
-        // every time a modal is shown, if it has an autofocus element, focus on it
-        $('.modal').on('shown.bs.modal', function() 
-        {
-            $(this).find('[autofocus]').focus();
-        })
-
-        // listen to radio inputs, text inputs and options
-        // when they get changed (someone clicks on them or enter text)
-        // fade the question's box out a bit
-        $('.modal input:radio, .modal input:checkbox, .modal input:text').change(function()
-        {
-            var $input = $(this),
-                $slide = $input.parent().parent().parent().parent().parent()
-
-            // console.log($input)
-            // console.log($slide)
-
-            $slide.addClass('done') 
-        })
-
-        // prevent the quiz form to submit on "Enter"
-        // eg: when people type in their group name and then press enter..
-        $('form[name=quizForm]').keypress(function(event) 
-        {
-            // console.log(event)
-            
-            //Enter key
-            if (event.which == 13) 
+        jQuery(document).ready(function($)
+    	{
+            // every time a modal is shown, if it has an autofocus element, focus on it
+            $('.modal').on('shown.bs.modal', function() 
             {
-                event.preventDefault()
-                // return false;
-            }
-        })
-        
-        /*$('form[name=quizForm]').submit(function(event){
-            //event.preventDefault()
-        })*/
-        // WELCOME MODAL
-        
-            // loads welcome modal on page load
-            var $modal = $('#welcome');
+                $(this).find('[autofocus]').focus();
+            })
+
+            // listen to radio inputs, text inputs and options
+            // when they get changed (someone clicks on them or enter text)
+            // fade the question's box out a bit
+            $('.modal input:radio, .modal input:checkbox, .modal input:text').change(function()
+            {
+                var $input = $(this),
+                    $slide = $input.parent().parent().parent().parent().parent()
+
+                // console.log($input)
+                // console.log($slide)
+
+                $slide.addClass('done') 
+            })
+
+            // prevent the quiz form to submit on "Enter"
+            // eg: when people type in their group name and then press enter..
+            $('form[name=quizForm]').keypress(function(event) 
+            {
+                // console.log(event)
+                
+                //Enter key
+                if (event.which == 13) 
+                {
+                    event.preventDefault()
+                    // return false;
+                }
+            })
             
-            // launch the modal
+            /*$('form[name=quizForm]').submit(function(event){
+                //event.preventDefault()
+            })*/
+            // WELCOME MODAL
+            
+                // loads welcome modal on page load
+                var $modal = $('#welcome');
+                
+                // launch the modal
+                $modal.modal(
+                {
+                    backdrop: 'static',
+                    keyboard: false
+                });
+                // .. and shows the modal by default
+                
+                // let's add an event listener to the "Enter" button inside the modal
+                // and to the form submit
+                $("#welcome-form").submit(onSubmit)
+                $("#welcome-submit-btn").click(onSubmit) 
+                
+                function onSubmit(event)
+                {
+                    // don't refresh the page, or submit the form...
+                    event.preventDefault();
+                    
+                    // alert('you clicked me!');
+                        
+                    // let's see what they typed in the input...
+                    var input = $("#welcome-input").val()
+
+                    // the official passwords are D1G174L and Z0MB135 
+                    // we can use the shortcut "$" for testing
+                    var passwords = ['D1G174L', 'Z0MB135', '$']
+
+                    var gotRightPassword = false
+                    for (var i = 0; i < passwords.length; i++) 
+                    {
+                        if (passwords[i] === input) gotRightPassword = true
+                    }
+
+                    if (gotRightPassword)    
+                    {
+                        // hey little hacker, you found the password :)
+                        // cool, you're in
+                        $modal.modal('hide');
+                        
+                        /*focus on group input field when modal is hidden*/
+                        $("#mlwUserName").focus();   
+                    }
+                    else
+                    {
+                        // no mate, try again
+                        // TODO shake the password input
+                       // alert('no mate, try again');
+                        var animationType = 'wobble'//'shake';
+                        $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            $modal.removeClass(animationType)
+                        });
+                    }
+                }
+        })    
+    </script>
+
+    <div class="modal fade animated" id="welcome" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content welcome-modal">
+                <h1>Welcome</h1>
+                <div class="modal-body">
+                    <form id="welcome-form" class="form-inline form-welcome" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <p>Type in the</p>
+                                <input id="welcome-input" type="text" placeholder="password" autofocus autocomplete="off">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="welcome-submit-btn" type="button" class="btn btn-primary">Enter site</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- end welcome modal -->
+
+    <div class="modal fade animated" id="error-modal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content welcome-modal">
+                <h1>Wait!</h1><br><br><br>
+                <div class="modal-body">
+                    <form id="welcome-form" class="form-inline form-welcome" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <p>You forgot to enter your name</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end error modal -->
+
+<!-- else we're on the quiz RESULTS page -->
+<?php else : ?>
+
+    <script type='text/javascript'>
+        jQuery(document).ready(function($)
+        {
+            var $modal = $('#survey')
+            
             $modal.modal(
             {
                 backdrop: 'static',
-                keyboard: false
-            });
-            // .. and shows the modal by default
-            
-            // let's add an event listener to the "Enter" button inside the modal
-            // and to the form submit
-            $("#welcome-form").submit(onSubmit)
-            $("#welcome-submit-btn").click(onSubmit) 
-            
-            function onSubmit(event)
+                keyboard: false 
+            })
+
+            $('#survey-btn').click(function()
             {
-                // don't refresh the page, or submit the form...
-                event.preventDefault();
-                
-                // alert('you clicked me!');
-                    
-                // let's see what they typed in the input...
-                var input = $("#welcome-input").val()
+                $modal.modal('hide')
+            })
+        })
+        
+    </script>
 
-                // the official passwords are D1G174L and Z0MB135 
-                // we can use the shortcut "$" for testing
-                var passwords = ['D1G174L', 'Z0MB135', '$']
-
-                var gotRightPassword = false
-                for (var i = 0; i < passwords.length; i++) 
-                {
-                    if (passwords[i] === input) gotRightPassword = true
-                }
-
-                if (gotRightPassword)    
-                {
-                    // hey little hacker, you found the password :)
-                    // cool, you're in
-                    $modal.modal('hide');
-                    
-                    /*focus on group input field when modal is hidden*/
-                    $("#mlwUserName").focus();   
-                }
-                else
-                {
-                    // no mate, try again
-                    // TODO shake the password input
-                   // alert('no mate, try again');
-                    var animationType = 'wobble'//'shake';
-                    $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                        $modal.removeClass(animationType)
-                    });
-                }
-            }
-    })
-    
-</script>
-
-
-
-<div class="modal fade animated" id="welcome" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content welcome-modal">
-            <h1>Welcome</h1>
-            <div class="modal-body">
-                <form id="welcome-form" class="form-inline form-welcome" role="form">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <p>Type in the</p>
-                            <input id="welcome-input" type="text" placeholder="password" autofocus autocomplete="off">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button id="welcome-submit-btn" type="button" class="btn btn-primary">Enter site</button>
+    <div class='modal fade animated' id='survey' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>
+        <div class='modal-dialog modal-lg'>
+            <div class='modal-content welcome-modal'>
+                <h1>Great!</h1>
+                <div class='modal-body'>
+                   <p>You've completed the quiz! Now take this awesome survey to help us...</p>
+                </div>
+                <div class='modal-footer'>
+                    <a id='survey-btn' href='https://www.surveymonkey.com/s/D5TTYDK' target='_blank'><button id='survey-submit-btn' type='button' class='btn btn-primary' >Lets do it!</button></a>
+                </div>
             </div>
         </div>
     </div>
-</div> 
-<!-- end welcome modal -->
 
-
-<div class="modal fade animated" id="error-modal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content welcome-modal">
-            <h1>Wait!</h1><br><br><br>
-            <div class="modal-body">
-                <form id="welcome-form" class="form-inline form-welcome" role="form">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <p>You forgot to enter your name</p>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Okay</button>
-            </div>
-        </div>
-    </div>
-</div>
 <?php endif; ?>
-
 
 <?php get_footer(); ?>
