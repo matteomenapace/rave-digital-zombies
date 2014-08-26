@@ -157,16 +157,25 @@ Template Name: Home with Quiz
                     
                 // let's see what they typed in the input...
                 var input = $("#welcome-input").val()
-                
-                if (input == "a") // TODO change password later
+
+                // the official passwords are D1G174L and Z0MB135 
+                // we can use the shortcut "$" for testing
+                var passwords = ['D1G174L', 'Z0MB135', '$']
+
+                var gotRightPassword = false
+                for (var i = 0; i < passwords.length; i++) 
+                {
+                    if (passwords[i] === input) gotRightPassword = true
+                }
+
+                if (gotRightPassword)    
                 {
                     // hey little hacker, you found the password :)
                     // cool, you're in
                     $modal.modal('hide');
                     
                     /*focus on group input field when modal is hidden*/
-                    $("#mlwUserName").focus(); 
-                    
+                    $("#mlwUserName").focus();   
                 }
                 else
                 {
@@ -177,7 +186,6 @@ Template Name: Home with Quiz
                     $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                         $modal.removeClass(animationType)
                     });
-
                 }
             }
     })
