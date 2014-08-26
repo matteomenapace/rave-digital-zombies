@@ -25,45 +25,31 @@
 
 	if ($_SERVER['HTTP_HOST'] == 'induction.baddeo.com') 			$environment = 'testing';
 	else if ($_SERVER['HTTP_HOST'] == 'localhost') 					$environment = 'dev-matteo';	
-/* 
-	@SEL and @RHYS, add your local host value under here (with mamp it should be 'localhost:8888')
-*/	
-	else if ($_SERVER['HTTP_HOST'] == 'localhost:8888')	$environment = 'dev-sel';
-	else if ($_SERVER['HTTP_HOST'] == 'ADD YOUR LOCAL HOST HERE') 	$environment = 'dev-rhys';
+	else if ($_SERVER['HTTP_HOST'] == 'localhost:8888')				$environment = 'dev-sel&rhys';
 
 
 	// WP_HOME and WP_SITEURL are set in the remote DB
 	// but we're overriding them here to use the local url instead
-
 	switch ($environment)
 	{
+		case 'production':
+			define ('WP_HOME', 			'http://induction.ravensbourne.ac.uk/');
+			define ('WP_SITEURL', 		'http://induction.ravensbourne.ac.uk/');
+			break;
+
 		case 'testing':
-			define ('DB_HOST', 			'localhost');
 			define ('WP_HOME', 			'http://induction.baddeo.com/');
 			define ('WP_SITEURL', 		'http://induction.baddeo.com/');
 			break;
 
 		case 'dev-matteo':
-			define ('DB_HOST', 			'46.183.13.53');
 			define ('WP_HOME', 			'http://localhost/rave/induction/microsite');
 			define ('WP_SITEURL', 		'http://localhost/rave/induction/microsite');
-			// define ('WP_CONTENT_DIR', 	$_SERVER['DOCUMENT_ROOT'] . '/rave/induction/microsite/wp-content'); 		// content directory is local
 			break;
 
-/* 
-	@SEL and @RHYS, add your local host values under here (with mamp it should be 'localhost:8888')
-*/
-
-		case 'dev-sel':
-			define ('DB_HOST', 			'46.183.13.53');
+		case 'dev-sel&rhys':
 			define ('WP_HOME', 			'http://localhost:8888/ravedigitalzombies');
 			define ('WP_SITEURL', 		'http://localhost:8888/ravedigitalzombies');
-			break;
-
-		case 'dev-rhys':
-			define ('DB_HOST', 			'46.183.13.53');
-			define ('WP_HOME', 			'CHANGE THIS');
-			define ('WP_SITEURL', 		'CHANGE THIS');
 			break;	
 	}
 	
@@ -76,10 +62,20 @@
 	// and /wp-content/themes/ravedigitalzombies/header.php
 
 	// DB settings
-	// remote DB on baddeo.com
-	define ('DB_NAME', 					'baddeocomwpp4o37y56');
-	define ('DB_USER', 					'wptz2apl46gvvmog');
-	define ('DB_PASSWORD', 				'J1rN3}7Pwhf%51d0UnCO');
+	
+		// remote DB on induction.baddeo.com
+		// define ('DB_HOST', 			'localhost');
+		define ('DB_HOST', 			'46.183.13.53');
+		define ('DB_NAME', 			'baddeocomwpp4o37y56');
+		define ('DB_USER', 			'wptz2apl46gvvmog');
+		define ('DB_PASSWORD', 		'J1rN3}7Pwhf%51d0UnCO');
+
+		// remote DB on induction.ravensbourne.ac.uk
+		/*define('DB_NAME', 			'inductio3_q7de');
+		define('DB_USER', 			'inductio3_q7de');
+		define('DB_PASSWORD', 		'fbbvy9syht63dult');
+		define('DB_HOST', 			'10.168.1.44');*/
+
 	define ('DB_CHARSET', 				'utf8');
 	define ('DB_COLLATE', 				'');
 
