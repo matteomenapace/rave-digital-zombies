@@ -22,9 +22,13 @@
 }
 .nav li:first-child a {
     color: #fff;
+    font-weight: bolder;
 }
 .nav li:first-child a:hover {
     background-color: #000
+}
+.sidebar ul.dropdown-menu li a {
+    padding: 15px;
 }
 .quiz_end {
     margin: -40px -20px -20px -20px;
@@ -56,6 +60,15 @@ header p {
 .green-button:active {
     background-color: #5b8186;
 }
+.quiz_section input[type="submit"]:hover,
+.quiz_section input[type="submit"]:focus,
+.quiz_section input[type="submit"]:active {
+    background-color: #5b8186;
+}
+#mlw_error_message_bottom {
+    display: inherit;
+    text-align: center;
+}
 /*responsive stuff*/
 
 @media (max-width: 768px) {
@@ -63,7 +76,10 @@ header p {
         background: none;
         background-color: #333;
     }
-    .image-gradient-thumb {
+    .container {
+        margin: 0 10px;
+    }
+    .content {} .image-gradient-thumb {
         bottom: 0;
         left: 0;
         right: 0;
@@ -76,7 +92,7 @@ header p {
         font-size: 60px;
     }
     .form-welcome {
-        margin: 50px 0;
+        margin: 70px 0 0;
     }
     a.logo {
         top: 0;
@@ -91,10 +107,7 @@ header p {
     }
     /*nav*/
     .sidebar ul.nav {
-        margin-top: -20px;
-    }
-    .nav li {
-        padding: 0 10px;
+        margin: -10px 0;
     }
     .main-container {
         margin: 20px 0 0;
@@ -112,5 +125,13 @@ header p {
     .page-title h1,
     h1.page-title {
         font-size: 60px;
+    }
+    /* input forms*/
+    .quiz_begin input[type="text"] {
+        font-size: 1.3em;
+    }
+    .quiz_section input[type="submit"] {
+        -webkit-appearance: none;
+        border-radius: 0;
     }
 }
