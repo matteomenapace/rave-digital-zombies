@@ -858,7 +858,7 @@ function mlw_quiz_shortcode($atts)
                <p>You've completed the quiz! Now take this awesome survey to help us...</p>
             </div>
             <div class='modal-footer'>
-                <a href='http://www.google.com'><button id='survey-submit-btn' type='button' class='btn btn-primary'>Lets do it!</button></a>
+                <a href='https://www.surveymonkey.com/s/D5TTYDK' target='_blank'><button id='survey-submit-btn' type='button' class='btn btn-primary'>Lets do it!</button></a>
             </div>
         </div>
     </div>
