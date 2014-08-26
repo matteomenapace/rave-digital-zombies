@@ -205,7 +205,7 @@ Template Name: Home with Quiz
             </div>
         </div>
     </div>
-</div>
+</div> 
 <!-- end welcome modal -->
 
 
