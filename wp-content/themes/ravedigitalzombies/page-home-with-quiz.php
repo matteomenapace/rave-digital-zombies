@@ -125,6 +125,9 @@ Template Name: Home with Quiz
             }
         })
         
+        /*$('form[name=quizForm]').submit(function(event){
+            //event.preventDefault()
+        })*/
         // WELCOME MODAL
         
             // loads welcome modal on page load
@@ -203,6 +206,26 @@ Template Name: Home with Quiz
 </div>
 <!-- end welcome modal -->
 
+
+<div class="modal fade animated" id="error-modal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content welcome-modal">
+            <h1>Wait!</h1><br><br><br>
+            <div class="modal-body">
+                <form id="welcome-form" class="form-inline form-welcome" role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <p>You forgot to enter your name</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+</div>
 <?php endif; ?>
 
 
