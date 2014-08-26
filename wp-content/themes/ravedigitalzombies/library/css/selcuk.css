@@ -71,21 +71,18 @@ header p {
     display: block;
     text-align: center;
 }
-a.logo-brain
-{
-	position: fixed;
-	bottom: 20px !important;
-	left: 20px;
-	z-index: 999999;
-	width: 120px;
-	display: block;
-	background-image: url('../../images/logo-brain.png');
-	background-repeat: no-repeat;
-	background-size: 100% !important;
-	height: 80px;
-	text-indent: -9999px;
-    right: 0;
-}	
+a.logo-brain {
+    position: fixed;
+    bottom: 20px !important;
+    width: 120px;
+    display: block;
+    background-image: url('../../images/logo-brain.png');
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    height: 90px;
+    text-indent: -9999px;
+    right: 20px;
+}
 /*responsive stuff*/
 
 @media (max-width: 768px) {
@@ -133,8 +130,18 @@ a.logo-brain
         z-index: 100;
         background-size: 75px !important;
         background-position: center;
-        width: 100%;
         left: 0;
+    }
+    a.logo-brain {
+        top: -3px;
+        margin: 0;
+        position: absolute;
+        display: inline-block;
+        z-index: 100;
+        background-size: 50px !important;
+        background-position: center;
+        float: right;
+        right: 0;
     }
     /*nav*/
     .sidebar ul.nav {

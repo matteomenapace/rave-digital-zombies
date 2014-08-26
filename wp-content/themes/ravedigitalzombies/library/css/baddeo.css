@@ -67,7 +67,6 @@ a.logo
 	position: fixed;
 	bottom: 20px !important;
 	left: 20px;
-	z-index: 999999;
 	width: 120px;
 	display: block;
 	background-image: url('http://www.ravensbourne.ac.uk/assets/img/logo.png');
