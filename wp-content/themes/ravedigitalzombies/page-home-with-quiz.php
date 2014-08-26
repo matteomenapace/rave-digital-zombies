@@ -221,7 +221,7 @@ Template Name: Home with Quiz
                     <form id="welcome-form" class="form-inline form-welcome" role="form">
                         <div class="form-group">
                             <div class="input-group">
-                                <p>You forgot to enter your name</p>
+                                <p>Make sure you type your name before you submit</p>
                             </div>
                         </div>
                     </form>
