@@ -13,22 +13,12 @@ Template Name: Home with Quiz
         
         <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
-            <!-- <section class=" post_content"> --> <!-- row -->
-
-                <!-- <div class="col-sm-12 main-content"> -->
-
-                <!-- navicon to scroll down to menu on mobile  <div id="navicon"></div>-->
-                   
-                    <!-- questions -->
-                    <div class="main-container"> <!-- col-sm-10  -->
-                       
-                        <?php the_content(); ?>
-
-                    </div> 
+            <!-- questions -->
+            <div class="main-container">
                
-                <!-- </div> -->
+                <?php the_content(); ?>
 
-            <!-- </section>  -->
+            </div>
 											
         </article> <!-- end article -->
 					
@@ -111,61 +101,76 @@ Template Name: Home with Quiz
             var $input = $(this),
                 $slide = $input.parent().parent().parent().parent().parent()
 
-            console.log($input)
-            console.log($slide)
+            // console.log($input)
+            // console.log($slide)
 
             $slide.addClass('done') 
         })
-        
-        
-        // loads welcome modal on page load
-        var $modal = $('#welcome');
-        
-        // launch the modal
-        $modal.modal(
-        {
-            backdrop: 'static',
-            keyboard: false
-        });
-        // .. and shows the modal by default
-        
-        // let's add an event listener to the "Enter" button inside the modal
-        // and to the form submit
-        $("#welcome-form").submit(onSubmit)
-        $("#welcome-submit-btn").click(onSubmit) 
-        
-        function onSubmit(event)
-        {
-            // don't refresh the page, or submit the form...
-            event.preventDefault();
-            
-            // alert('you clicked me!');
-                
-            // let's see what they typed in the input...
-            var input = $("#welcome-input").val()
-            
-            if (input == "a") // TODO change password later
-            {
-                // hey little hacker, you found the password :)
-                // cool, you're in
-                $modal.modal('hide');
-                
-                /*focus on group input field when modal is hidden*/
-                $("#mlwUserName").focus(); 
-                
-            }
-            else
-            {
-                // no mate, try again
-                // TODO shake the password input
-               // alert('no mate, try again');
-                var animationType = 'wobble'//'shake';
-                $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $modal.removeClass(animationType)
-                });
 
+        // prevent the quiz form to submit on "Enter"
+        // eg: when people type in their group name and then press enter..
+        $('form[name=quizForm]').keypress(function(event) 
+        {
+            // console.log(event)
+            
+            //Enter key
+            if (event.which == 13) 
+            {
+                event.preventDefault()
+                // return false;
             }
-        }
+        })
+        
+        // WELCOME MODAL
+        
+            // loads welcome modal on page load
+            var $modal = $('#welcome');
+            
+            // launch the modal
+            $modal.modal(
+            {
+                backdrop: 'static',
+                keyboard: false
+            });
+            // .. and shows the modal by default
+            
+            // let's add an event listener to the "Enter" button inside the modal
+            // and to the form submit
+            $("#welcome-form").submit(onSubmit)
+            $("#welcome-submit-btn").click(onSubmit) 
+            
+            function onSubmit(event)
+            {
+                // don't refresh the page, or submit the form...
+                event.preventDefault();
+                
+                // alert('you clicked me!');
+                    
+                // let's see what they typed in the input...
+                var input = $("#welcome-input").val()
+                
+                if (input == "a") // TODO change password later
+                {
+                    // hey little hacker, you found the password :)
+                    // cool, you're in
+                    $modal.modal('hide');
+                    
+                    /*focus on group input field when modal is hidden*/
+                    $("#mlwUserName").focus(); 
+                    
+                }
+                else
+                {
+                    // no mate, try again
+                    // TODO shake the password input
+                   // alert('no mate, try again');
+                    var animationType = 'wobble'//'shake';
+                    $modal.addClass(animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $modal.removeClass(animationType)
+                    });
+
+                }
+            }
     })
     
 </script>
