@@ -1,6 +1,9 @@
 .badge {
     background-color: #749ba0;
 }
+.navicon {
+    display: none;
+}
 /* sidebar */
 
 .sidebar {
@@ -22,7 +25,6 @@
 }
 .nav li:first-child a {
     color: #fff;
-    font-weight: bolder;
 }
 .nav li:first-child a:hover {
     background-color: #000
@@ -76,6 +78,15 @@ header p {
         background: none;
         background-color: #333;
     }
+    .navicon {
+        display: block;
+        color: #fff;
+        background-color: #5b8186;
+        padding: 10px;
+        border: 0;
+        width: 100%;
+        margin: 20px 0 0;
+    }
     .container {
         margin: 0 10px;
     }
@@ -113,9 +124,6 @@ header p {
     /*nav*/
     .sidebar ul.nav {
         margin: -10px 0;
-    }
-    .main-container {
-        margin: 20px 0 0;
     }
     #main {
         padding: 0;
