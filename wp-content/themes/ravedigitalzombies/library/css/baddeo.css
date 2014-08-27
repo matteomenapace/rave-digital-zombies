@@ -67,12 +67,12 @@ a.logo
 	position: fixed;
 	bottom: 20px !important;
 	left: 20px;
-	width: 120px;
 	display: block;
 	background-image: url('http://www.ravensbourne.ac.uk/assets/img/logo.png');
 	background-repeat: no-repeat;
 	background-size: 100% !important;
-	height: 80px;
+	width: 149px; /*120px;*/
+	height: 99px; /*80px;*/
 	text-indent: -9999px;
 }	
 
