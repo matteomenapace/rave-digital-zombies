@@ -138,15 +138,15 @@ Template Name: Home with Quiz
                 // launch the modal
                 $modal.modal(
                 {
-                    backdrop: 'static',
-                    keyboard: false
+                    // backdrop: 'static',
+                    // keyboard: false
                 });
                 // .. and shows the modal by default
                 
                 // let's add an event listener to the "Enter" button inside the modal
                 // and to the form submit
-                $("#welcome-form").submit(onSubmit)
-                $("#welcome-submit-btn").click(onSubmit) 
+                // $("#welcome-form").submit(onSubmit)
+                // $("#welcome-submit-btn").click(onSubmit) 
                 
                 function onSubmit(event)
                 {
@@ -191,7 +191,7 @@ Template Name: Home with Quiz
         })    
     </script>
 
-    <div class="modal fade animated" id="welcome" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <!-- <div class="modal fade animated" id="welcome" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content welcome-modal">
                 <h1>Welcome</h1>
@@ -206,7 +206,29 @@ Template Name: Home with Quiz
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button id="welcome-submit-btn" type="button" class="btn btn-primary">Enter site</button>
+                    <button id="welcome-submit-btn" type="button" class="btn btn-primary" >Enter site</button>
+                </div>
+            </div>
+        </div>
+    </div>  -->
+    <div class="modal fade animated" id="welcome" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content welcome-modal">
+                <h1>Hello human!</h1>
+                <div class="modal-body">
+                    <form id="welcome-form" class="form-inline form-welcome" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <p>By now you should have rescued a <i>digital zombie</i> and learned a thing or two about Ravensbourne.</p>
+                                <p>Good, <b>take this quiz</b>!</p>
+                                <p>It's just 10 questions, you'll be done in no time :)</p>
+                                <!-- <input id="welcome-input" type="text" placeholder="password" autofocus autocomplete="off"> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="welcome-submit-btn" type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
                 </div>
             </div>
         </div>
@@ -248,7 +270,7 @@ Template Name: Home with Quiz
                 keyboard: false 
             })
 
-            $('#survey-btn').click(function()
+            $('.survey-btn').click(function()
             {
                 $modal.modal('hide')
             })
@@ -261,10 +283,10 @@ Template Name: Home with Quiz
             <div class='modal-content welcome-modal'>
                 <h1>Great!</h1>
                 <div class='modal-body'>
-                   <p>You've completed the quiz! Now take this awesome survey to help us...</p>
+                   <p>Quiz done. Now complete <a class='survey-btn' href='https://www.surveymonkey.com/s/digitalzombie' target='_blank'>this survey</a> to help us improve the Induction day!</p>
                 </div>
                 <div class='modal-footer'>
-                    <a id='survey-btn' href='https://www.surveymonkey.com/s/digitalzombie' target='_blank'><button id='survey-submit-btn' type='button' class='btn btn-primary' >Lets do it!</button></a>
+                    <a class='survey-btn' href='https://www.surveymonkey.com/s/digitalzombie' target='_blank'><button id='survey-submit-btn' type='button' class='btn btn-primary'>Okay</button></a>
                 </div>
             </div>
         </div>
