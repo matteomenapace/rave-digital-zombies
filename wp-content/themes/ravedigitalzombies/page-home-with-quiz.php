@@ -262,13 +262,17 @@ Template Name: Home with Quiz
     <script type='text/javascript'>
         jQuery(document).ready(function($)
         {
-            var $modal = $('#survey')
-            
-            $modal.modal(
+            var delay = 7000, // 7 seconds
+                $modal = $('#survey')
+
+            setTimeout(function() 
             {
-                backdrop: 'static',
-                keyboard: false 
-            })
+                $modal.modal(
+                {
+                    backdrop: 'static',
+                    keyboard: false 
+                })
+            }, delay)
 
             $('.survey-btn').click(function()
             {
