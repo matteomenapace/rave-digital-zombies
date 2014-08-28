@@ -74,6 +74,7 @@ body {
     left: 20px;
     right: 20px;
     top: 90px;
+    cursor: pointer;
 }
 .image-gradient-thumb {
     z-index: 1000;
