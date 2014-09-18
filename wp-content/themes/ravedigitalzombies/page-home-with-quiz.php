@@ -193,7 +193,7 @@ Template Name: Home with Quiz
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button id="welcome-submit-btn" type="button" class="btn btn-primary">Submit!</button>
+					<button id="welcome-submit-btn" type="button" class="btn btn-primary">Submit</button>
 				</div>
 			</div>
 		</div>
