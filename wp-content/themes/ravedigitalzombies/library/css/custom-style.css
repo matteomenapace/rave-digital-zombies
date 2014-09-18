@@ -207,102 +207,141 @@ h4.modal-title {
     margin: 0;
     text-align: center;
 }
-.quiz_begin::-webkit-input-placeholder {
+#mlwUserName::-webkit-input-placeholder {
     color: #fff;
-    opacity: 0.4;
+    opacity: 0.6;
 }
-.quiz_begin:-moz-placeholder {
+#mlwUserName:-moz-placeholder {
     color: #fff;
+    opacity: 0.6;
 }
-.quiz_begin::-moz-placeholder {
+#mlwUserName::-moz-placeholder {
     color: #fff;
+    opacity: 0.6;
 }
-.quiz_begin:-ms-input-placeholder {
+#mlwUserName:-ms-input-placeholder {
     color: #fff;
 }
 /* WELCOME MODAL */
 
-.welcome-modal h1 {
-    position: relative;
-    float: left;
-    background: #333333;
-    color: #ffffff;
-    padding: 10px 30px 10px 30px;
-    font-size: 90px;
-    line-height: 1em;
-    letter-spacing: -2px;
-    margin: 0;
-}
-.page-title h1,
-h1.page-title {
-    position: relative;
-    float: left;
-    background: #333333;
-    color: #ffffff;
-    padding: 10px 30px 10px 30px;
-    font-size: 90px;
-    line-height: 1em;
-    letter-spacing: -2px;
-    margin: -10px -10px 20px
-}
-.welcome-modal p {
-    /*color: #749ba0 !important;*/
-    color: #000;
-    display: inline-block;
-    padding-top: 30px;
-    font-size: 24px;
-}
-#welcome-input {
-    border: 0;
-    /*border-bottom: 1px dotted #749ba0;*/
-    color: #749ba0;
-    font-size: 24px;
-    margin-left: 6px;
-    width: 105px;
-}
-.welcome-modal::-webkit-input-placeholder {
-    color: #749ba0;
-    opacity: 0.4;
-    border-bottom: 1px dotted #749ba0;
-}
-.welcome-modal:-moz-placeholder {
-    /* Firefox 18- */
-    color: #749ba0;
-    opacity: 0.4;
-    border-bottom: 1px dotted #749ba0;
-}
-.welcome-modal::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #749ba0;
-    opacity: 0.4;
-    border-bottom: 1px dotted #749ba0;
-}
-.welcome-modal:-ms-input-placeholder {
-    color: #749ba0;
-    opacity: 0.4;
-    border-bottom: 1px dotted #749ba0;
-}
-.welcome-modal-btn {
-    margin: 1em 0;
-    display: inline-block;
-    margin-top: 50px;
-    font-size: 1.3em;
-    text-align: center;
-    width: 100%;
-}
-.welcome-modal-btn {
-    line-height: 3;
-    text-transform: uppercase;
-    cursor: pointer;
-    position: relative;
-    background: #749ba0;
-    color: #fff;
-    padding: 0 1em 0 0;
-    font-size: 40%;
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
+    .welcome-modal h1 {
+        position: relative;
+        float: left;
+        background: #333333;
+        color: #ffffff;
+        padding: 10px 30px 10px 30px;
+        font-size: 90px;
+        line-height: 1em;
+        letter-spacing: -2px;
+        margin: 0;
+    }
+    .page-title h1,
+    h1.page-title {
+        position: relative;
+        float: left;
+        background: #333333;
+        color: #ffffff;
+        padding: 10px 30px 10px 30px;
+        font-size: 90px;
+        line-height: 1em;
+        letter-spacing: -2px;
+        margin: -10px -10px 20px
+    }
+
+    .welcome-modal p {
+        /*color: #749ba0 !important;*/
+        color: #000;
+        display: inline-block;
+        padding-top: 20px;
+        font-size: 24px;
+    }
+
+    .welcome-modal .form-group
+    {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    #welcome-input 
+    {
+        /*border: 0;
+        color: #749ba0;
+        font-size: 24px;
+        margin-left: 6px;
+        width: 105px;*/
+
+        border: 0;
+        color: #fff;
+        background-color: #749ba0;
+        font-size: 2em;
+        padding: 15px 30px;
+        text-align: center;
+    }
+    #welcome-input::-webkit-input-placeholder {
+        /*color: #749ba0;*/
+        color: white;
+        opacity: 0.6;
+        /*border-bottom: 1px dotted #749ba0;*/
+    }
+    #welcome-input:-moz-placeholder {
+        /* Firefox 18- */
+        /*color: #749ba0;*/
+        color: white;
+        opacity: 0.6;
+        /*border-bottom: 1px dotted #749ba0;*/
+    }
+    #welcome-input::-moz-placeholder {
+        /* Firefox 19+ */
+        /*color: #749ba0;*/
+        color: white;
+        opacity: 0.6;
+        /*border-bottom: 1px dotted #749ba0;*/
+    }
+    #welcome-input:-ms-input-placeholder {
+        /*color: #749ba0;*/
+        color: white;
+        opacity: 0.6;
+        /*border-bottom: 1px dotted #749ba0;*/
+    }
+
+    .welcome-modal-btn {
+        margin: 1em 0;
+        display: inline-block;
+        margin-top: 50px;
+        font-size: 1.3em;
+        text-align: center;
+        width: 100%;
+    }
+    .welcome-modal-btn {
+        line-height: 3;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        background: #749ba0;
+        color: #fff;
+        padding: 0 1em 0 0;
+        font-size: 40%;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    @media screen and (min-width: 768px){
+       
+        .welcome-modal p
+        {
+            padding-top: 30px;
+        }
+
+        #welcome-input 
+        {
+            width: 600px;
+            margin: 0 -40px;
+        } 
+    }
+
+/* FORMS */
+
 input[type="checkbox"] {
     display: none;
 }

@@ -37,6 +37,11 @@ body:before
 	padding-top: 30px;
 }
 
+small, .small 
+{
+	font-size: 50%;
+}
+
 /* QUIZ */
 
 /*.quiz_section,*/
