@@ -1413,7 +1413,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			//$mlw_contact_display .= "<p>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)." </p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Enter your name' autocomplete='off' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' value='".$current_user->display_name."' placeholder='Your name and surname' autocomplete='off' />";
 			
 
 		}
@@ -1448,7 +1448,7 @@ function mlwDisplayContactInfo($mlw_quiz_options)
 		if ($mlw_quiz_options->user_name != 2)
 		{
 			$mlw_contact_display .= "<p style='font-weight:bold;';>".htmlspecialchars_decode($mlw_quiz_options->name_field_text, ENT_QUOTES)."</p>";
-			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Enter your name' />";
+			$mlw_contact_display .= "<input type='text' x-webkit-speech name='mlwUserName' id='mlwUserName'value='' placeholder='Your name and surname' />";
 			//$mlw_contact_display .= "<br /><br />";
 		}
 		if ($mlw_quiz_options->user_comp != 2)
