@@ -24,11 +24,6 @@ Template Name: Home with Quiz
 									
 		</article> 
 					
-			<?php 
-				// No comments on homepage
-				//comments_template();
-			?>
-					
 		<?php endwhile; ?>	
 		
 		<?php else : ?>
