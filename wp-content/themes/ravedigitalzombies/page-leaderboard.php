@@ -110,10 +110,10 @@ Template Name: Leaderboard
 			{
 				// build the leaderboard with new data
 				buildLeaderboard(json)
-				
-				// try and fetch again after XX seconds
-				setTimeout(fetchData, updateInterval)
 			})
+
+			// try and fetch again after XX seconds
+			setTimeout(fetchData, updateInterval)
 		}	
 
 		// do the first fetch
