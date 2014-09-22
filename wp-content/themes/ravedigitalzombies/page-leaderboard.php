@@ -91,18 +91,44 @@ Template Name: Leaderboard
 	<script src="<?php echo(WP_THEME_URL); ?>/library/js/leaderboard.js"></script>
 
 	<?php 
+
 		$sheet_number = get_post_meta( get_the_ID(), 'sheet_number', true );
-		if( empty( $key_1_value ) ) $sheet_number = 1;
+		if( empty( $sheet_number ) ) $sheet_number = 1;
 	?>
 
-	<script src="http://spreadsheets.google.com/feeds/list/13syiGKLkEd7j6irGyuTCRnc77ggYSX7zRTkm3RUu8xs/<?= $sheet_number ?>/public/values?alt=json-in-script&callback=buildLeaderboard"></script>
+	<script type="text/javascript">
+
+		var $ = jQuery, // WP chokes if we don't define the jQuery's shortcut
+			updateInterval = 30 * 1000, // we'll try and fetch the spreadsheet feed every 30 seconds
+			spreadsheetUrl = "https://spreadsheets.google.com/feeds/list/13syiGKLkEd7j6irGyuTCRnc77ggYSX7zRTkm3RUu8xs/<?= $sheet_number ?>/public/values?alt=json"
+
+		function fetchData()
+		{
+			console.log('fetchData')
+
+			$.getJSON(spreadsheetUrl, function(json)
+			{
+				// build the leaderboard with new data
+				buildLeaderboard(json)
+				
+				// try and fetch again after XX seconds
+				setTimeout(fetchData, updateInterval)
+			})
+		}	
+
+		// do the first fetch
+		fetchData(spreadsheetUrl)
+
+	</script>
+
+	<!-- <script src="https://spreadsheets.google.com/feeds/list/13syiGKLkEd7j6irGyuTCRnc77ggYSX7zRTkm3RUu8xs/<?= $sheet_number ?>/public/values?alt=json-in-script&callback=buildLeaderboard"></script> -->
 	<!-- 
 		to get a JSON feed from a publich Google Spreadsheet we need to ask it this way
-		1. http://spreadsheets.google.com/feeds/list/
+		1. https://spreadsheets.google.com/feeds/list/
 		2. SPREADSHEET_PUBLIC_KEY (eg: 13syiGKLkEd7j6irGyuTCRnc77ggYSX7zRTkm3RUu8xs )
 		3. SHEET_NUMBER (eg: 2)
 		4. public/values?alt=json-in-script
-		5. callback=CALLBACK_NAME (eg: buildLeaderboard)
+		5. callback=CALLBACK_NAME (eg: buildLeaderboard) OPTIONAL
 		
 		the whole URL would look like this
 		http://spreadsheets.google.com/feeds/list/13syiGKLkEd7j6irGyuTCRnc77ggYSX7zRTkm3RUu8xs/2/public/values?alt=json-in-script&callback=buildLeaderboard

@@ -2,6 +2,7 @@
 
 function buildLeaderboard(json) 
 {
+	console.log('buildLeaderboard')
 	// console.log(json.feed.entry)
 
 	// let's declare a few variables we'll need to build the leaderboard
@@ -41,6 +42,9 @@ function buildLeaderboard(json)
 	sortedTeams = _(teams).sortBy(function(team){ return - team.score})
 
 	// console.log(sortedTeams)
+
+	// empty the list
+	$ol.empty()
 
 	// let's loop through the teams
 	_(sortedTeams).each(function(team)
