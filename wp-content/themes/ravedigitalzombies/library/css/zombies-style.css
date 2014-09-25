@@ -37,6 +37,12 @@
         }    
     }
 
+    html, body 
+    {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 14px;
+    }
+
 /* QUIZ */
 
     .quiz_section input[type="submit"] {
@@ -425,6 +431,36 @@
                     font-size: 2em;
                 }
 
+/* HOMEPAGE WITH LINKS */
+
+    .page-template-page-homepage-php:before
+    {
+        background-image: url('http://www.ravensbourne.ac.uk/media/44612/jb0056_Background.jpg');
+    }
+
+    .page-template-page-homepage-php .main-container p
+    {
+        clear: both;
+        padding: 5px;
+    }
+
+    .page-template-page-homepage-php .main-container .navbar-nav
+    {
+        float: none;
+        margin: -10px;
+        margin-top: 10px;
+    }
+
+    .page-template-page-homepage-php .main-container .navbar-nav a
+    {
+        text-decoration: underline;
+    }
+    
+    .page-template-page-homepage-php .main-container .navbar-nav a:hover
+    {
+        text-decoration: none;
+    }    
+
 /* DUMPS TO SORT OUT*/
 
     /* DUMP */
@@ -649,14 +685,6 @@
             text-indent: -9999px;
         }   
 
-        /* TYPOGRAPHY */
-
-        html, body 
-        {
-            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            font-size: 14px;
-        }
-
         /* SIDEBAR */
 
         .sidebar a
@@ -721,7 +749,8 @@
             background: white;
             margin-bottom: 20px;
         }
-        .nav li:first-child {
+
+        /*.nav li:first-child {
             background-color: #333;
         }
         .nav li:first-child a {
@@ -729,7 +758,8 @@
         }
         .nav li:first-child a:hover {
             background-color: #000
-        }
+        }*/
+        
         .sidebar ul.dropdown-menu li a {
             padding: 15px;
         }
